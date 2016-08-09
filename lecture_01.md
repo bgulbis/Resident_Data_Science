@@ -67,7 +67,7 @@ title: false
 ![nejm](lecture_01-figure/nejm_2016-06-23.png)
 
 
-Big Data in Healthcare
+Impact on Healthcare
 ========================================================
 
 * Preventative medicine
@@ -80,7 +80,7 @@ Big Data in Healthcare
 
 <small>[Forbes](http://www.forbes.com/sites/bernardmarr/2015/04/21/how-big-data-is-changing-healthcare/#ee268ec32d91)</small>
 
-Big Data in Healthcare
+Impact on Healthcare
 ========================================================
 
 * Personalized medicine
@@ -94,6 +94,10 @@ How is this relevant to me?
 ========================================================
 type: prompt
 incremental: true
+
+* Research
+* Patient care
+* Job skills
 
 
 Data in Research
