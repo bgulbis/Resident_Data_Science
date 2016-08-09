@@ -4,7 +4,7 @@ author: Brian Gulbis and Jennifer Gass
 date: August 17, 2016
 autosize: true
 
-Overview of Series
+Overview of Data Series
 ========================================================
 
 * Big Data Overview
@@ -19,6 +19,13 @@ Objectives
 * Define big data
 * Describe how big data is important to healthcare
 * Determine where to get big data
+* Identify precautions for using big (and little) data
+
+Big Data at SCCM
+========================================================
+type: section
+
+* 11 minutes
 
 Big Data
 ========================================================
@@ -52,6 +59,16 @@ Big Data
 
 Big Data in Healthcare
 ========================================================
+type: section
+
+NEJM TOC
+========================================================
+title: false
+![nejm](lecture_01-figure/nejm_2016-06-23.png)
+
+
+Big Data in Healthcare
+========================================================
 
 * Preventative medicine
     - Combine data from multiple sources to create predictive models
@@ -75,6 +92,9 @@ Big Data in Healthcare
 
 How is this relevant to me?
 ========================================================
+type: prompt
+incremental: true
+
 
 Data in Research
 ========================================================
