@@ -79,12 +79,19 @@ Relevance of Big Data
 
 * Patient care
 * Research
-* Career skills
+* Career advancement
+
+Big Data in Research
+========================================================
+<blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Number of pubs looking at <a href="https://twitter.com/hashtag/BigData?src=hash">#BigData</a> &amp; <a href="https://twitter.com/hashtag/Health?src=hash">#Health</a> on <a href="https://twitter.com/hashtag/PubMed?src=hash">#PubMed</a> are sky-rocketing <a href="https://twitter.com/hashtag/MadeWithR?src=hash">#MadeWithR</a> <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> <a href="https://t.co/BDNLVPigx1">pic.twitter.com/BDNLVPigx1</a></p>&mdash; Matt Crowson (@DrMattCrowson) <a href="https://twitter.com/DrMattCrowson/status/761006072698118144">August 4, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 Data Skills for Career Advancement
 ========================================================
 
 ![career_skills](lecture_01-figure/career_skills.png)
+
+<small>MONEY and PayScale.com. Published in June 2016 MONEY magazine</small>
 
 Ways to Utilize Big Data
 ========================================================
