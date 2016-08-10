@@ -19,55 +19,21 @@ Objectives
 * Define big data
 * Describe how big data is important to healthcare
 * Determine where to get big data
-* Identify precautions for using big (and little) data
-
-Big Data at SCCM
-========================================================
-type: section
-
-* 11 minutes
+* Identify precautions when using big (and little) data
 
 Big Data
 ========================================================
 
-![big data](lecture_01-figure/howmuch.png)
+* Describes the large volume of data (both structured and unstructured) which is available to businesses on a daily basis
+* Can be analyzed to make better and more strategic decsisions
+    - Cost reductions
+    - Time reductions
+    - New or optimized products and services
+    - Smarter decision making
 
-<small>http://mashable.com/2011/06/28/data-infographic</small>
-
-***
-
-* Gigabyte
-* Terabyte
-* Petabyte
-* Exabyte
-* __Zettabyte__
-* Yottabyte
-
-Big Data
-========================================================
-
-* 90% of data was generated over the past two years
-* Data comes from everywhere:
-    - Sensors used to gather climate information
-    - Posts to social media sites
-    - Digital pictures and videos
-    - Purchase transaction records
-    - Cell phone GPS signals
-    - __Electronic Medical Records__
-
-<small>http://www-01.ibm.com/software/data/bigdata/what-is-big-data.html</small>
+<small>http://www.sas.com/en_us/insights/big-data/what-is-big-data.html</small>
 
 Big Data in Healthcare
-========================================================
-type: section
-
-NEJM TOC
-========================================================
-title: false
-![nejm](lecture_01-figure/nejm_2016-06-23.png)
-
-
-Impact on Healthcare
 ========================================================
 
 * Preventative medicine
@@ -80,7 +46,12 @@ Impact on Healthcare
 
 <small>[Forbes](http://www.forbes.com/sites/bernardmarr/2015/04/21/how-big-data-is-changing-healthcare/#ee268ec32d91)</small>
 
-Impact on Healthcare
+NEJM TOC
+========================================================
+title: false
+![nejm](lecture_01-figure/nejm_2016-06-23.png)
+
+Big Data in Healthcare
 ========================================================
 
 * Personalized medicine
@@ -90,15 +61,40 @@ Impact on Healthcare
 
 <small>[Forbes](http://www.forbes.com/sites/bernardmarr/2015/04/21/how-big-data-is-changing-healthcare/#ee268ec32d91)</small>
 
+Big Data at SCCM
+========================================================
+type: section
+
+* 11 minutes
+
 How is this relevant to me?
 ========================================================
 type: prompt
 incremental: true
 
-* Research
-* Patient care
-* Job skills
+Like it or not, big data is going to significantly shape your career
 
+Relevance of Big Data
+========================================================
+
+* Patient care
+* Research
+* Career skills
+
+Data Skills for Career Advancement
+========================================================
+
+![career_skills](lecture_01-figure/career_skills.png)
+
+Ways to Utilize Big Data
+========================================================
+
+1. New sources of data for traditional analysis
+1. Identify new causal relationships
+1. New analytical methods (i.e., machine learning)
+1. Integration of clinical information with operations and research
+
+<small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
 
 Data in Research
 ========================================================
