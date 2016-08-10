@@ -17,7 +17,7 @@ Objectives
 ========================================================
 
 * Define big data
-* Describe how big data is important to healthcare
+* Describe how big data is important within healthcare
 * Determine where to get big data
 * Identify precautions when using big (and little) data
 
@@ -70,9 +70,13 @@ type: section
 How is this relevant to me?
 ========================================================
 type: prompt
-incremental: true
 
-Like it or not, big data is going to significantly shape your career
+How is this relevant to me?
+========================================================
+transition: none
+title: false
+
+## Like it or not, big data is going to significantly shape your career
 
 Relevance of Big Data
 ========================================================
