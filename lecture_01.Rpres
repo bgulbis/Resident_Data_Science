@@ -70,42 +70,36 @@ type: section
 How is this relevant to me?
 ========================================================
 type: prompt
+incremental: true
 
-How is this relevant to me?
-========================================================
-transition: none
-title: false
-
-## Like it or not, big data is going to significantly shape your career
-
-Relevance of Big Data
-========================================================
-
-* Patient care
-* Research
-* Career advancement
+* Like it or not, big data is going to significantly impact your career
+    - Patient care
+    - Research
+    - Career advancement
 
 Big Data in Research
 ========================================================
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Number of pubs looking at <a href="https://twitter.com/hashtag/BigData?src=hash">#BigData</a> &amp; <a href="https://twitter.com/hashtag/Health?src=hash">#Health</a> on <a href="https://twitter.com/hashtag/PubMed?src=hash">#PubMed</a> are sky-rocketing <a href="https://twitter.com/hashtag/MadeWithR?src=hash">#MadeWithR</a> <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> <a href="https://t.co/BDNLVPigx1">pic.twitter.com/BDNLVPigx1</a></p>&mdash; Matt Crowson (@DrMattCrowson) <a href="https://twitter.com/DrMattCrowson/status/761006072698118144">August 4, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Data Skills for Career Advancement
+Career Advancement
+========================================================
+
+![data_science_shortage](lecture_01-figure/data_science_shortage_mckinsey.png)
+
+Who is a Data Scientist?
+========================================================
+
+![career_skills](lecture_01-figure/Data_Science_VD.png)
+
+<small>[Drew Conway](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)</small>
+
+Data Science Skills are Valuable
 ========================================================
 
 ![career_skills](lecture_01-figure/career_skills.png)
 
 <small>MONEY and PayScale.com. Published in June 2016 MONEY magazine</small>
-
-Ways to Utilize Big Data
-========================================================
-
-1. New sources of data for traditional analysis
-1. Identify new causal relationships
-1. New analytical methods (i.e., machine learning)
-1. Integration of clinical information with operations and research
-
-<small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
 
 Data in Research
 ========================================================
@@ -116,6 +110,16 @@ Data in Research
 * It does not matter how much data you have if you are not asking the right question
 
 <small>[The Data Scientist's Toolbox - Coursera](https://www.coursera.org/learn/data-scientists-tools)</small>
+
+Ways to Utilize Big Data
+========================================================
+
+1. New sources of data for traditional analysis
+1. Identify new causal relationships
+1. New analytical methods (i.e., machine learning)
+1. Integration of clinical information with operations and research
+
+<small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
 
 Sources of Data
 ========================================================
