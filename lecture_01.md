@@ -87,6 +87,8 @@ incremental: true
 Patient Care
 ========================================================
 
+*
+
 <small>[Stanford Scope](http://scopeblog.stanford.edu/2013/09/27/big-data-big-finds-clinical-trial-for-deadly-lung-cancer-launched-by-stanford-study/)</small>
 
 Big Data in Research
