@@ -46,10 +46,17 @@ Big Data in Healthcare
 
 <small>[Forbes](http://www.forbes.com/sites/bernardmarr/2015/04/21/how-big-data-is-changing-healthcare/#ee268ec32d91)</small>
 
-NEJM TOC
+Data Sharing
 ========================================================
-title: false
 ![nejm](lecture_01-figure/nejm_2016-06-23.png)
+
+<small>N Engl J Med. 2016;374(25)</small>
+
+***
+
+![nejm](lecture_01-figure/nejm_2016-08-04.png)
+
+<small>N Engl J Med. 2016;375(5)</small>
 
 Big Data in Healthcare
 ========================================================
@@ -63,9 +70,9 @@ Big Data in Healthcare
 
 Big Data at SCCM
 ========================================================
-type: section
+type: prompt
 
-* 11 minutes
+<small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
 
 How is this relevant to me?
 ========================================================
@@ -75,14 +82,14 @@ incremental: true
 * Like it or not, big data is going to significantly impact your career
     - Patient care
     - Research
-    - Career advancement
+    - Career opportunities
 
 Big Data in Research
 ========================================================
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Number of pubs looking at <a href="https://twitter.com/hashtag/BigData?src=hash">#BigData</a> &amp; <a href="https://twitter.com/hashtag/Health?src=hash">#Health</a> on <a href="https://twitter.com/hashtag/PubMed?src=hash">#PubMed</a> are sky-rocketing <a href="https://twitter.com/hashtag/MadeWithR?src=hash">#MadeWithR</a> <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> <a href="https://t.co/BDNLVPigx1">pic.twitter.com/BDNLVPigx1</a></p>&mdash; Matt Crowson (@DrMattCrowson) <a href="https://twitter.com/DrMattCrowson/status/761006072698118144">August 4, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Career Advancement
+Career Opportunities
 ========================================================
 
 ![data_science_shortage](lecture_01-figure/data_science_shortage_mckinsey.png)
