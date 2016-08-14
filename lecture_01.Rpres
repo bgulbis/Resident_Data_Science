@@ -122,11 +122,9 @@ Data Science Skills are Valuable
 
 <small>MONEY and PayScale.com. Published in June 2016 MONEY magazine</small>
 
-But I'm a Pharmacy Resident...
+But I'm Just a Pharmacy Resident...
 ========================================================
 type: alert
-
-## Not a computer programmer
 
 Who is a Data Scientist?
 ========================================================
