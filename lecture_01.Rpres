@@ -98,7 +98,7 @@ Patient Care
 
 ![cancer_discovery](lecture_01-figure/cancer_discov_2013.png)
 
-<small>*Cancer Discov* 2013;3:1364-77</small>
+<small>*Cancer Discov* 2013;3:1364</small>
 
 Big Data in Research
 ========================================================
