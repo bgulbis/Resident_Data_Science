@@ -36,6 +36,15 @@ Big Data
 Big Data in Healthcare
 ========================================================
 
+* Amount of medical data is expected to double every 73 days by 2020
+* 80% of health data is unstructured
+* Most data is siloed in individual EMR systems
+
+<small>http://www.ibm.com/smarterplanet/us/en/ibmwatson/health/</small>
+
+Uses of Big Data
+========================================================
+
 * Preventative medicine
     - Combine data from multiple sources to create predictive models
         + Fitness trackers, medical and insurance records, genetic data, etc.
@@ -58,7 +67,7 @@ Data Sharing
 
 <small>*N Engl J Med* 2016;375(5)</small>
 
-Big Data in Healthcare
+Uses of Big Data
 ========================================================
 
 * Personalized medicine
