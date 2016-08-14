@@ -31,7 +31,7 @@ Big Data
     - New or optimized products and services
     - Smarter decision making
 
-<small>http://www.sas.com/en_us/insights/big-data/what-is-big-data.html</small>
+<small>[SAS](http://www.sas.com/en_us/insights/big-data/what-is-big-data.html)</small>
 
 Big Data in Healthcare
 ========================================================
@@ -40,7 +40,7 @@ Big Data in Healthcare
 * 80% of health data is unstructured
 * Most data is siloed in individual EMR systems
 
-<small>http://www.ibm.com/smarterplanet/us/en/ibmwatson/health/</small>
+<small>[IBM](http://www.ibm.com/smarterplanet/us/en/ibmwatson/health/)</small>
 
 Uses of Big Data
 ========================================================
@@ -85,7 +85,7 @@ type: prompt
 
 How is this relevant to me?
 ========================================================
-type: prompt
+type: alert
 incremental: true
 
 * Like it or not, big data is going to significantly impact your career
