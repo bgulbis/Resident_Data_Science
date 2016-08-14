@@ -50,13 +50,13 @@ Data Sharing
 ========================================================
 ![nejm](lecture_01-figure/nejm_2016-06-23.png)
 
-<small>N Engl J Med. 2016;374(25)</small>
+<small>*N Engl J Med* 2016;374(25)</small>
 
 ***
 
 ![nejm](lecture_01-figure/nejm_2016-08-04.png)
 
-<small>N Engl J Med. 2016;375(5)</small>
+<small>*N Engl J Med* 2016;375(5)</small>
 
 Big Data in Healthcare
 ========================================================
@@ -87,9 +87,9 @@ incremental: true
 Patient Care
 ========================================================
 
-*
+![cancer_discovery](lecture_01-figure/cancer_discov_2013.png)
 
-<small>[Stanford Scope](http://scopeblog.stanford.edu/2013/09/27/big-data-big-finds-clinical-trial-for-deadly-lung-cancer-launched-by-stanford-study/)</small>
+<small>*Cancer Discov* 2013;3:1364-77</small>
 
 Big Data in Research
 ========================================================
