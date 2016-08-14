@@ -93,12 +93,17 @@ incremental: true
     - Research
     - Career opportunities
 
-Patient Care
+Patient Care - New Discoveries
 ========================================================
 
 ![cancer_discovery](lecture_01-figure/cancer_discov_2013.png)
 
 <small>*Cancer Discov* 2013;3:1364</small>
+
+Patient Care - Prevention and Faster Diagnosis
+========================================================
+
+* IBM Watson Health
 
 Big Data in Research
 ========================================================
