@@ -110,19 +110,25 @@ Career Opportunities
 
 ![data_science_shortage](lecture_01-figure/data_science_shortage_mckinsey.png)
 
-Who is a Data Scientist?
-========================================================
-
-![career_skills](lecture_01-figure/Data_Science_VD.png)
-
-<small>[Drew Conway](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)</small>
-
 Data Science Skills are Valuable
 ========================================================
 
 ![career_skills](lecture_01-figure/career_skills.png)
 
 <small>MONEY and PayScale.com. Published in June 2016 MONEY magazine</small>
+
+But I'm a Pharmacy Resident...
+========================================================
+type: alert
+
+## Not a computer programmer
+
+Who is a Data Scientist?
+========================================================
+
+![career_skills](lecture_01-figure/Data_Science_VD.png)
+
+<small>[Drew Conway](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)</small>
 
 Data in Research
 ========================================================
