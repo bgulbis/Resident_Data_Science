@@ -13,7 +13,7 @@ Overview of Data Series
 * Organizing Data for Analysis
 * Visualizing and Reporting Data
 
-Objectives
+Objectives for Today
 ========================================================
 
 * Define big data
@@ -23,6 +23,7 @@ Objectives
 
 Big Data
 ========================================================
+incremental: true
 
 * Describes the large volume of data (both structured and unstructured) which is available to businesses on a daily basis
 * Can be analyzed to make better and more strategic decsisions
@@ -51,7 +52,7 @@ Uses of Big Data
 * Clinical trials
     - Data often kept in silos
         + 96% of potentially available data on cancer patients has not been analyzed
-    - Data-sharing will allow for new discoveries which otherwise would not be apparent
+    - Data sharing will allow for new discoveries which otherwise would not be apparent
 
 <small>[Forbes](http://www.forbes.com/sites/bernardmarr/2015/04/21/how-big-data-is-changing-healthcare/#ee268ec32d91)</small>
 
@@ -102,8 +103,17 @@ Patient Care - New Discoveries
 
 Patient Care - Prevention and Faster Diagnosis
 ========================================================
+incremental: true
 
 * IBM Watson Health
+    - Technology platform that uses natural language processing and machine learning to reveal insights from large amounts of unstructured data
+    - Can read and analyze large amounts of medical records and literature
+        + 40 million documents in 15 seconds
+    - Improve clinicians ability to diagnose and treat conditions
+        + Oncology
+        + Preventative care for chronic conditions
+
+<small>[IBM](http://www.ibm.com/smarterplanet/us/en/ibmwatson/health/)</small>
 
 Big Data in Research
 ========================================================
