@@ -176,9 +176,33 @@ The Problem (Part 1)
 
 * Having all of this data is great!
     - Allows for studies with much larger scopes to be completed in reasonable time frames
-    - Can perform more in-depth analysis
+    - Identify new causal relationships
+    - Develop predictive models using machine learning
 * Unfortunately, data rarely comes "ready-to-use"
 * Preparing the data requires some technical know-how and additional tools
+
+Data Processing Tools
+========================================================
+
+* Basic
+    - Spreadsheets (Microsoft Excel, Google Sheets, etc.)
+* Intermediate
+    - Advanced spreadsheet functions
+    - Databases (Microsoft Access, MySQL, etc.)
+* Advanced
+    - Programming languages (R, Python, Julia, etc.)
+    - Commerical programming (SAS, SPSS, etc.)
+
+Data Preparation
+========================================================
+
+* Estimated that 80% of data analysis is spent on cleaning and preparing data
+* Major limiting factor for most "amateur" researchers
+* Adequately preparing data will facilitate data analysis
+    - Allows data to be input into various anlaysis tools
+    - Some analysis cannot be performed without cleaning or transforming raw data
+
+<small>Dasu T, Johnson T (2003). Exploratory Data Mining and Data Cleaning. Wiley-IEEE.</small>
 
 The Problem (Part 2)
 ========================================================
