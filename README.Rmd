@@ -1,0 +1,8 @@
+---
+title: "Resident Data Science Series"
+output: github_document
+---
+
+## Lectures
+
+1. [Big Data Overview](https://bgulbis.github.io/Resident_Data_Science/lecture_01.html)
