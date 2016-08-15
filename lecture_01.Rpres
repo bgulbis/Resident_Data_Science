@@ -4,6 +4,26 @@ author: Brian Gulbis and Jennifer Gass
 date: August 17, 2016
 autosize: true
 
+Why are we here?
+========================================================
+type: alert
+incremental: true
+
+* Feedback from previous residents
+* Wanted to learn more about performing statistical analysis on research data
+
+Research Project Process (Theoretical)
+========================================================
+incremental: true
+
+* Develop research protocol
+* Get IRB approval
+* Collect data (how?)
+* Put the data into a stats program (how?)
+* Report significant p-values
+* Make a poster, presentation, and manuscript
+* Celebrate that it's done
+
 Overview of Data Series
 ========================================================
 
@@ -177,9 +197,10 @@ Sources of Data
 * National organizations
     - UHC/Vizient Clinical Data Base / Resource Manager
     - SCCM Critical Care Registry (pending)
-* Government
+* State / Federal Agencies
+    - US government https://www.data.gov
     - CMS/Hospital Compare
-    - CDC (NHANES, etc.)
+    - CDC https://data.cdc.gov
 
 The Problem (Part 1)
 ========================================================
