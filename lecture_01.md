@@ -151,13 +151,6 @@ So I've Convinced You Big Data is Important...
 type: prompt
 incremental: true
 
-* Let's look at some cautions when utilizing big data
-
-<small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
-
-Data in Research
-========================================================
-
 * Data is the second most important thing in research
 * The question being asked is the first
 * Data may limit or enable certain questions
@@ -173,10 +166,12 @@ Sources of Data
     - EDW, TheraDoc, Cardinal DCOA
 * National organizations
     - UHC/Vizient Clinical Data Base / Resource Manager
-* Public Data
-    - Hospital Compare, Registries
+    - SCCM Critical Care Registry (pending)
+* Government
+    - CMS/Hospital Compare
+    - CDC (NHANES, etc.)
 
-The Problem
+The Problem (Part 1)
 ========================================================
 
 * Having all of this data is great!
@@ -184,3 +179,12 @@ The Problem
     - Can perform more in-depth analysis
 * Unfortunately, data rarely comes "ready-to-use"
 * Preparing the data requires some technical know-how and additional tools
+
+The Problem (Part 2)
+========================================================
+
+* Using big data is not always as straightforward as it looks
+* Let's look at some cautions when utilizing big data
+
+<small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
+
