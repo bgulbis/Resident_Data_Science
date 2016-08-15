@@ -12,17 +12,18 @@ incremental: true
 * Feedback from previous residents
 * Wanted to learn more about performing statistical analysis on research data
 
-Research Project Process (Theoretical)
+It's Not So Simple...
 ========================================================
-incremental: true
 
-* Develop research protocol
-* Get IRB approval
-* Collect data (how?)
-* Put the data into a stats program (how?)
-* Report significant p-values
-* Make a poster, presentation, and manuscript
-* Celebrate that it's done
+Before You Can... | You Need To...
+---------------|-------------
+Perform statistical analysis | Understand your data
+Understand your data | Explore and visualize your data
+Explore and visualize your data | Have clean data to work with
+Have clean data to work with | Tidy raw data through transformation and aggregation
+Tidy raw data through transformation and aggregation | Collect some data
+Collect some data | Find a source of data
+Find a source of data | Have a research question you are trying answer
 
 Overview of Data Series
 ========================================================
@@ -39,7 +40,7 @@ Objectives for Today
 * Define big data
 * Describe how big data is important within healthcare
 * Determine where to get big data
-* Identify precautions when using big (and little) data
+* Identify potential issues with big (and little) data
 
 Big Data
 ========================================================
