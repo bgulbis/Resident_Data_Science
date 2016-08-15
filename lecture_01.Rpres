@@ -194,9 +194,10 @@ Sources of Data
 
 * Hospital / system databases
     - Care4, Sovera (manual)
-    - EDW, TheraDoc, Cardinal DCOA
+    - EDW, CDW, TheraDoc, Cardinal DCOA
 * National organizations
     - UHC/Vizient Clinical Data Base / Resource Manager
+    - STS National Database
     - SCCM Critical Care Registry (pending)
 * State / Federal Agencies
     - US government https://www.data.gov
@@ -210,20 +211,31 @@ The Problem (Part 1)
     - Allows for studies with much larger scopes to be completed in reasonable time frames
     - Identify new causal relationships
     - Develop predictive models using machine learning
-* Unfortunately, data rarely comes "ready-to-use"
-* Preparing the data requires some technical know-how and additional tools
+* Unfortunately, **data rarely comes "ready-to-use"**
 
-Data Processing Tools
+What You Want...
 ========================================================
 
-* Basic
-    - Spreadsheets (Microsoft Excel, Google Sheets, etc.)
-* Intermediate
-    - Advanced spreadsheet functions
-    - Databases (Microsoft Access, MySQL, etc.)
-* Advanced
-    - Commerical software (SAS, SPSS, Stata, etc.)
-    - Programming languages (R, Python, Julia, etc.)
+![tidy_data](lecture_01-figure/tidy_data.png)
+
+What You Get...
+========================================================
+
+![raw_data](lecture_01-figure/raw_data.png)
+
+Getting There...
+========================================================
+
+* Preparing the data requires some technical know-how and additional tools
+* Data Processing Tools
+    - Basic
+        + Spreadsheets (Microsoft Excel, Google Sheets, etc.)
+    - Intermediate
+        + Advanced spreadsheet functions
+        + Databases (Microsoft Access, MySQL, etc.)
+    - Advanced
+        + Commerical software (SAS, SPSS, Stata, etc.)
+        + Programming languages (R, Python, Julia, etc.)
 
 Data Preparation
 ========================================================
@@ -246,8 +258,7 @@ Data Science Project
 The Problem (Part 2)
 ========================================================
 
-* Using big data is not always as straightforward as it looks
-* Let's look at some cautions when utilizing big data
+* Using big data is not as straightforward as it looks
 
 <small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
 
