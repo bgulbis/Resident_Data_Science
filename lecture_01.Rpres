@@ -204,6 +204,13 @@ Data Preparation
 
 <small>Dasu T, Johnson T (2003). Exploratory Data Mining and Data Cleaning. Wiley-IEEE.</small>
 
+Data Science Project
+========================================================
+
+![hadley-data-science](lecture_01-figure/data-science.png)
+
+<small>[Grolemund G, Wickham H. R for Data Science](http://r4ds.had.co.nz/)</small>
+
 The Problem (Part 2)
 ========================================================
 
