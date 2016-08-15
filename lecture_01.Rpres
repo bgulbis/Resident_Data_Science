@@ -191,7 +191,7 @@ Data Processing Tools
     - Databases (Microsoft Access, MySQL, etc.)
 * Advanced
     - Programming languages (R, Python, Julia, etc.)
-    - Commerical programming (SAS, SPSS, etc.)
+    - Commerical software (SAS, SPSS, Stata, etc.)
 
 Data Preparation
 ========================================================
