@@ -110,6 +110,16 @@ Big Data in Research
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Number of pubs looking at <a href="https://twitter.com/hashtag/BigData?src=hash">#BigData</a> &amp; <a href="https://twitter.com/hashtag/Health?src=hash">#Health</a> on <a href="https://twitter.com/hashtag/PubMed?src=hash">#PubMed</a> are sky-rocketing <a href="https://twitter.com/hashtag/MadeWithR?src=hash">#MadeWithR</a> <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> <a href="https://t.co/BDNLVPigx1">pic.twitter.com/BDNLVPigx1</a></p>&mdash; Matt Crowson (@DrMattCrowson) <a href="https://twitter.com/DrMattCrowson/status/761006072698118144">August 4, 2016</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+Ways to Utilize Big Data
+========================================================
+
+1. New sources of data for traditional analysis
+1. Identify new causal relationships
+1. New analytical methods (i.e., machine learning)
+1. Integration of clinical information with operations and research
+
+<small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
+
 Career Opportunities
 ========================================================
 
@@ -122,16 +132,28 @@ Data Science Skills are Valuable
 
 <small>MONEY and PayScale.com. Published in June 2016 MONEY magazine</small>
 
-But I'm Just a Pharmacy Resident...
+But I'm a Pharmacy Resident...
 ========================================================
 type: alert
+incremental: true
 
-Who is a Data Scientist?
+* If desired, you have unique skills that could allow you to become a data scientist
+
+What is a Data Scientist?
 ========================================================
 
 ![career_skills](lecture_01-figure/Data_Science_VD.png)
 
 <small>[Drew Conway](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)</small>
+
+So I've Convinced You Big Data is Important...
+========================================================
+type: prompt
+incremental: true
+
+* Let's look at some cautions when utilizing big data
+
+<small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
 
 Data in Research
 ========================================================
@@ -142,16 +164,6 @@ Data in Research
 * It does not matter how much data you have if you are not asking the right question
 
 <small>[The Data Scientist's Toolbox - Coursera](https://www.coursera.org/learn/data-scientists-tools)</small>
-
-Ways to Utilize Big Data
-========================================================
-
-1. New sources of data for traditional analysis
-1. Identify new causal relationships
-1. New analytical methods (i.e., machine learning)
-1. Integration of clinical information with operations and research
-
-<small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
 
 Sources of Data
 ========================================================
