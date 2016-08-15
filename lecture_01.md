@@ -190,8 +190,8 @@ Data Processing Tools
     - Advanced spreadsheet functions
     - Databases (Microsoft Access, MySQL, etc.)
 * Advanced
-    - Programming languages (R, Python, Julia, etc.)
     - Commerical software (SAS, SPSS, Stata, etc.)
+    - Programming languages (R, Python, Julia, etc.)
 
 Data Preparation
 ========================================================
