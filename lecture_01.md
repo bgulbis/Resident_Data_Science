@@ -124,7 +124,6 @@ Patient Care - New Discoveries
 
 Patient Care - Prevention and Faster Diagnosis
 ========================================================
-incremental: true
 
 * IBM Watson Health
     - Technology platform that uses natural language processing and machine learning to reveal insights from large amounts of unstructured data
@@ -163,13 +162,6 @@ Data Science Skills are Valuable
 
 <small>MONEY and PayScale.com. Published in June 2016 MONEY magazine</small>
 
-But I'm a Pharmacy Resident...
-========================================================
-type: alert
-incremental: true
-
-* If desired, you have unique skills that could allow you to become a data scientist
-
 What is a Data Scientist?
 ========================================================
 
@@ -177,7 +169,17 @@ What is a Data Scientist?
 
 <small>[Drew Conway](http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram)</small>
 
-So I've Convinced You Big Data is Important...
+But I'm a Pharmacy Resident...
+========================================================
+type: alert
+incremental: true
+
+* If desired, you can be in a unique position to take advantage of the need for analytical ability
+    - Have substantive expertise
+    - Have (some) math and statistics knowledge
+    - "Hacking" skills can be learned
+
+So Big Data is Important...
 ========================================================
 type: prompt
 incremental: true
@@ -227,15 +229,7 @@ Getting There...
 ========================================================
 
 * Preparing the data requires some technical know-how and additional tools
-* Data Processing Tools
-    - Basic
-        + Spreadsheets (Microsoft Excel, Google Sheets, etc.)
-    - Intermediate
-        + Advanced spreadsheet functions
-        + Databases (Microsoft Access, MySQL, etc.)
-    - Advanced
-        + Commerical software (SAS, SPSS, Stata, etc.)
-        + Programming languages (R, Python, Julia, etc.)
+* "Hacking" skills
 
 Data Preparation
 ========================================================
@@ -247,6 +241,17 @@ Data Preparation
     - Some analysis cannot be performed without cleaning or transforming raw data
 
 <small>Dasu T, Johnson T (2003). Exploratory Data Mining and Data Cleaning. Wiley-IEEE.</small>
+
+Data Processing Tools
+========================================================
+* Basic
+    - Spreadsheets (Microsoft Excel, Google Sheets, etc.)
+* Intermediate
+    - Advanced spreadsheet functions
+    - Databases (Microsoft Access, MySQL, etc.)
+* Advanced
+    - Commerical software (SAS, SPSS, Stata, etc.)
+    - Programming languages (R, Python, Julia, etc.)
 
 Data Science Project
 ========================================================
