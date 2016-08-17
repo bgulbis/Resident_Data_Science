@@ -209,19 +209,24 @@ incremental: true
 Sources of Data
 ========================================================
 
-* Hospital / system databases
+* Hospital / System Databases
     - Care4, Sovera (manual)
-    - EDW, CDW, TheraDoc, Cardinal DCOA
-* National organizations
+    - EDW, TheraDoc, Cardinal DCOA
+* National Organizations
     - UHC/Vizient Clinical Data Base / Resource Manager
     - STS National Database
     - SCCM Critical Care Registry (pending)
+
+***
+
 * State / Federal Agencies
-    - US government https://www.data.gov
+    - US government
+        + https://www.data.gov
+        + https://www.healthdata.gov
     - CMS/Hospital Compare
     - CDC https://data.cdc.gov
 
-Problems with Big Data (Part 1)
+Problems with Big Data
 ========================================================
 
 * Having all of this data is great!
@@ -229,6 +234,12 @@ Problems with Big Data (Part 1)
     - Identify new causal relationships
     - Develop predictive models using machine learning
 * Unfortunately, **data rarely comes "ready-to-use"**
+
+Fundamental Problem of Observational Data Analysis I
+========================================================
+type: prompt
+
+<small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
 
 What You Want...
 ========================================================
@@ -268,17 +279,17 @@ Data Processing Tools
     - Commerical software (SAS, SPSS, Stata, etc.)
     - Programming languages (R, Python, Julia, etc.)
 
-Data Science Project
-========================================================
-
-![hadley-data-science](lecture_01-figure/data-science.png)
-
-<small>[Grolemund G, Wickham H. R for Data Science](http://r4ds.had.co.nz/)</small>
-
 Problems with Big Data (Part 2)
 ========================================================
 
 * Using big data is not as straightforward as it looks
 
 <small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
+
+Data Science Project
+========================================================
+
+![hadley-data-science](lecture_01-figure/data-science.png)
+
+<small>[Grolemund G, Wickham H. R for Data Science](http://r4ds.had.co.nz/)</small>
 
