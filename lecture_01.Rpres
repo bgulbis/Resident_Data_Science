@@ -182,7 +182,7 @@ But I'm a Pharmacy Resident...
 type: alert
 incremental: true
 
-* If desired, you can put yourself in a unique position to take advantage of the need for analytical ability
+* If desired, you can put yourself in a unique position to take advantage of the growing need for people with analytical abilities
     - Have substantive expertise
     - Have (at least some) math and statistics knowledge
     - "Hacking" skills can be learned
@@ -193,7 +193,7 @@ But I'm a Pharmacy Resident...
 ========================================================
 transition: none
 
-* If desired, you can put yourself in a unique position to take advantage of the need for analytical ability
+* If desired, you can put yourself in a unique position to take advantage of the growing need for people with analytical abilities
     - Have substantive expertise
     - Have (at least some) math and statistics knowledge
     - "Hacking" skills can be learned
