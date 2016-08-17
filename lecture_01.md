@@ -254,6 +254,8 @@ What You Get...
 Getting There...
 ========================================================
 
+* Understanding the structure of your data is __essential__
+* Almost every data set is going to require some amount of preparation prior to being analyzed
 * Preparing the data requires some technical know-how and additional tools
 * "Hacking" skills
 
@@ -261,7 +263,7 @@ Data Preparation
 ========================================================
 
 * Estimated that 80% of data analysis is spent on cleaning and preparing data
-* Major limiting factor for most "amateur" researchers
+* __Major limiting factor for most "amateur" researchers__
 * Adequately preparing data will facilitate data analysis
     - Allows data to be input into various anlaysis tools
     - Some analysis cannot be performed without cleaning or transforming raw data
@@ -279,14 +281,17 @@ Data Processing Tools
     - Commerical software (SAS, SPSS, Stata, etc.)
     - Programming languages (R, Python, Julia, etc.)
 
-Problems with Big Data (Part 2)
+Fundamental Problem of Observational Data Analysis II
 ========================================================
-
-* Using big data is not as straightforward as it looks
+type: prompt
 
 <small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
 
-Data Science Project
+Where Do We Go Next?
+========================================================
+type: section
+
+Data Project Process
 ========================================================
 
 ![hadley-data-science](lecture_01-figure/data-science.png)
