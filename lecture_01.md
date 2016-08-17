@@ -135,12 +135,12 @@ Patient Care - Prevention and Faster Diagnosis
 
 <small>[IBM](http://www.ibm.com/smarterplanet/us/en/ibmwatson/health/)</small>
 
-Big Data in Research
+Research - Big Data Articles on PubMed
 ========================================================
 <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Number of pubs looking at <a href="https://twitter.com/hashtag/BigData?src=hash">#BigData</a> &amp; <a href="https://twitter.com/hashtag/Health?src=hash">#Health</a> on <a href="https://twitter.com/hashtag/PubMed?src=hash">#PubMed</a> are sky-rocketing <a href="https://twitter.com/hashtag/MadeWithR?src=hash">#MadeWithR</a> <a href="https://twitter.com/hashtag/rstats?src=hash">#rstats</a> <a href="https://t.co/BDNLVPigx1">pic.twitter.com/BDNLVPigx1</a></p>&mdash; Matt Crowson (@DrMattCrowson) <a href="https://twitter.com/DrMattCrowson/status/761006072698118144">August 4, 2016</a></blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Ways to Utilize Big Data
+Research - Ways to Utilize Big Data
 ========================================================
 
 1. New sources of data for traditional analysis
@@ -174,10 +174,25 @@ But I'm a Pharmacy Resident...
 type: alert
 incremental: true
 
-* If desired, you can be in a unique position to take advantage of the need for analytical ability
+* If desired, you can put yourself in a unique position to take advantage of the need for analytical ability
     - Have substantive expertise
-    - Have (some) math and statistics knowledge
+    - Have (at least some) math and statistics knowledge
     - "Hacking" skills can be learned
+
+***
+
+But I'm a Pharmacy Resident...
+========================================================
+transition: none
+
+* If desired, you can put yourself in a unique position to take advantage of the need for analytical ability
+    - Have substantive expertise
+    - Have (at least some) math and statistics knowledge
+    - "Hacking" skills can be learned
+
+***
+
+![career_skills](lecture_01-figure/Data_Science_VD.png)
 
 So Big Data is Important...
 ========================================================
@@ -206,7 +221,7 @@ Sources of Data
     - CMS/Hospital Compare
     - CDC https://data.cdc.gov
 
-The Problem (Part 1)
+Problems with Big Data (Part 1)
 ========================================================
 
 * Having all of this data is great!
@@ -260,7 +275,7 @@ Data Science Project
 
 <small>[Grolemund G, Wickham H. R for Data Science](http://r4ds.had.co.nz/)</small>
 
-The Problem (Part 2)
+Problems with Big Data (Part 2)
 ========================================================
 
 * Using big data is not as straightforward as it looks
