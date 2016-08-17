@@ -4,7 +4,7 @@ author: Brian Gulbis and Jennifer Gass
 date: August 17, 2016
 autosize: true
 
-Why are we here?
+Why Are We Here?
 ========================================================
 type: alert
 incremental: true
@@ -25,6 +25,13 @@ Tidy raw data through transformation and aggregation | Collect some data
 Collect some data | Find a source of data
 Find a source of data | Have a research question you are trying answer
 
+Data Project Process
+========================================================
+
+<img src="lecture_01-figure/data-science.png" width=80% height=80%></img>
+
+<small>[Grolemund G, Wickham H. R for Data Science](http://r4ds.had.co.nz/)</small>
+
 Overview of Data Series
 ========================================================
 
@@ -32,6 +39,7 @@ Overview of Data Series
 * Data Storage and Implications
 * Collecting Data Efficiently
 * Organizing Data for Analysis
+* Data Analysis and Statistics
 * Visualizing and Reporting Data
 
 Objectives for Today
@@ -223,8 +231,11 @@ Sources of Data
     - US government
         + https://www.data.gov
         + https://www.healthdata.gov
-    - CMS/Hospital Compare
-    - CDC https://data.cdc.gov
+    - CMS
+        + Hospital Compare
+    - CDC
+        + NHANES
+        + https://data.cdc.gov
 
 Problems with Big Data
 ========================================================
@@ -246,7 +257,7 @@ What You Want...
 
 ![tidy_data](lecture_01-figure/tidy_data.png)
 
-What You Get...
+What You Usually Get...
 ========================================================
 
 ![raw_data](lecture_01-figure/raw_data.png)
@@ -279,7 +290,7 @@ Data Processing Tools
     - Databases (Microsoft Access, MySQL, etc.)
 * Advanced
     - Commerical software (SAS, SPSS, Stata, etc.)
-    - Programming languages (R, Python, Julia, etc.)
+    - Open-source software (R, Python, Julia, etc.)
 
 Fundamental Problem of Observational Data Analysis II
 ========================================================
@@ -287,14 +298,18 @@ type: prompt
 
 <small>Iwashyna, TJ. Big Data. SCCM Annual Congress 2016</small>
 
-Where Do We Go Next?
-========================================================
-type: section
-
-Data Project Process
+Summary
 ========================================================
 
-![hadley-data-science](lecture_01-figure/data-science.png)
+* Big data is here and it's not going away
+* Big data is changing
+    - The way patients are cared for
+    - The way research is conducted
+* Big data is a big opportunity for those who want to take advantage of it
 
-<small>[Grolemund G, Wickham H. R for Data Science](http://r4ds.had.co.nz/)</small>
+Now, Let's Go Find Some Big Data
+========================================================
 
+* https://www.data.gov
+* https://www.healthdata.gov
+* https://data.cdc.gov
