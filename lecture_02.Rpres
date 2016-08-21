@@ -300,6 +300,8 @@ Human Readable
     - fig01_scatterplot-talk-length-vs-interest.png
     - fig02_histogram-talk-attendance.png
 
+<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
+
 Follows Default Ordering
 ========================================================
 
@@ -313,3 +315,17 @@ Follows Default Ordering
     - 1_data-cleaning.r
     - 2_fit-model.r
 
+<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
+
+Summary
+========================================================
+
+* Data organized in rows and columns
+* Follow tidy data principles
+* Store data in ways that will facilitate sharing and analysis
+* Use standard data types and denote missing data
+* Naming and organizing your files wisely will be much appreciated by "future you"
+
+Let's Work with Some Data
+========================================================
+type: section
