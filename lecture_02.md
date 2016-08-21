@@ -1,4 +1,4 @@
-Data Storage and Implications
+Data Storage and Associated Implications
 ========================================================
 author: Brian Gulbis and Jennifer Gass
 date: August 31, 2016
@@ -7,22 +7,55 @@ autosize: true
 Objectives
 ========================================================
 
-* Raw vs. Tidy Data
-* File Naming?
-* Other
+* Data organization
+* Tidy vs. messy data
+* Data storage options
+* Data types
+* File naming
 
-Raw Data
+Data Organization
 ========================================================
 
-* Original source of data
-* Usually "messy"
-* Difficult, if not impossible, to use for analysis
+* Good data organization will facilitate sharing and analysis
+* Data typically organized in rows and columns
+    - Rows: observations
+    - Columns: variables
+* Should follow the principles of "tidy data"
 
-Raw Data Example
+***
+
+id | age | sex
+---|-----|----
+1 | 54 | male
+2 | 72 | female
+3 | 45 | female
+
+Principles of Tidy Data
 ========================================================
 
+* Each variable should be in one column
+    - Data within the column should be of the same type
+* Each observation of that variable should be in a different row
+* Variable names should be stored in the first row
+    - Names should be descriptive and readable
+    - Use minimal abbreviations
+    - Avoid having spaces in name
+        + Good: med_name, sedativeRate
+        + Bad: clnevnt, ce, clinical event
 
-Most Common Problems with Messy Data
+<small>Wickham, H. Tidy data. J Stat Software 2014; 59 (10)</small>
+
+Principles of Tidy Data
+========================================================
+
+* Variables of different "kinds" should be stored in separate tables
+    - Ex: Diagnostic data stored separately from vital sign data
+* Each table should be stored in its **own file**
+* Multiple tables should have a column which allows them to be linked
+
+<small>Wickham, H. Tidy data. J Stat Software 2014; 59 (10)</small>
+
+Common Problems with Messy Data
 ========================================================
 
 * Column headers are values, not variable names
@@ -53,6 +86,20 @@ Jewish|19|19|25|25|30|95
 
 <small>Wickham, H. Tidy data. J Stat Software 2014; 59 (10)</small>
 
+Tidy Version
+========================================================
+
+religion | income | freq
+---------|--------|------
+Agnostic|<$10k|27
+Agnostic|$10-20k|34
+Agnostic|$20-30k|60
+Agnostic|$30-40k|81
+Agnostic|$40-50k|76
+Agnostic|$50-75k|137
+Atheist|<$10k|12
+Atheist|$10-20k|27
+
 Multiple Variables in Each Column
 ========================================================
 
@@ -72,6 +119,22 @@ AS|2000|-|-|-|-|1|1|-|-
 <small>Data from: World Health Organization</small>
 
 <small>Wickham, H. Tidy data. J Stat Software 2014; 59 (10)</small>
+
+Tidy Version
+========================================================
+
+country | year | sex | age | cases
+--------|------|-----|-----|------
+AD|2000|m|0-14|0
+AD|2000|m|15-24|0
+AD|2000|m|25-34|1
+AD|2000|m|35-44|0
+AD|2000|m|45-54|0
+AD|2000|m|55-64|0
+AD|2000|m|65+|0
+AE|2000|m|0-14|2
+AE|2000|m|15-24|4
+AE|2000|m|25-34|4
 
 Variables Stored in Rows and Columns
 ========================================================
@@ -93,39 +156,72 @@ MX17004|2010|5|tmin|-|-|-|-|-|-|-|-
 
 <small>Wickham, H. Tidy data. J Stat Software 2014; 59 (10)</small>
 
-Tidy data
-========================================================
-* Data has been processed and is ready for analysis
-* Manipulations include
-    - Filtering
-    - Transforming
-    - Aggregating
-    - Sorting
-* All processing steps should be recorded
-
-Principles of Tidy Data
+Tidy Version
 ========================================================
 
-* Each variable should be in one column
-    - Data within the column should be of the same type
-* Each observation of that variable should be in a different row
-* Variables of different “kinds” should be in different tables
-    - Each table should be stored in it’s **own file**
-    - Multiple tables should have a column which allows them to be linked
+id | date | tmax | tmin
+---|------|------|-----
+MX17004|2010-01-30|27.8|14.5
+MX17004|2010-02-02|27.3|14.4
+MX17004|2010-02-03|24.1|14.4
+MX17004|2010-02-11|29.7|13.4
+MX17004|2010-02-23|29.9|10.7
+MX17004|2010-03-05|32.1|14.2
 
-<small>Wickham, H. Tidy data. J Stat Software 2014; 59 (10)</small>
-
-Principles of Tidy Data
+Data Storage
 ========================================================
 
-* Variable names should be stored in the first row
-    - Names should be descriptive and readable
-    - Use minimal abbreviations
-    - Avoid having spaces in name
-        + Good: med_name, sedativeRate
-        + Bad: clnevnt, ce, clinical event
+* Spreadsheets (Excel, Google Sheets, etc.)
+* Text files (delimited: csv, tab, etc.)
+* Databases (Access, SQL Server, MySQL, PostgreSQL, etc.)
 
-<small>Wickham, H. Tidy data. J Stat Software 2014; 59 (10)</small>
+Spreadsheets
+========================================================
+
+* Commonly used by most people
+* Usually works if organized appropriately
+* Potential issues
+    - Compatibility varies depending on file type
+    - Calculated cells may not be read correctly
+    - Limits on number of rows that can be stored
+    - No record of any transformations which were done
+
+<small>https://github.com/jtleek/datasharing</small>
+
+Data Analysis and Spreadsheets
+========================================================
+type: prompt
+
+<small>Bryan J. jailbreakr: Get out of Excel, free. useR! Conference 2016</small>
+
+Spreadsheet Do's and Don'ts
+========================================================
+
+* Do
+    - Start in cell **A1**
+        + Row 1 column names
+    - Keep data in one sheet
+    - Put analysis in separate file
+        + Link back to data file
+        + Calculations and charts go here
+    - Keep detailed record of transformations
+
+***
+
+* Don't
+    - Highlight, format, or merge cells
+    - Use macros
+    - Use spreadsheet as your data collection form
+
+Text Files
+========================================================
+
+* Highest degree of compatibility
+* No limit on number of rows or columns
+* Only the values are retained
+    - No information about column types or cell formatting
+
+<small>https://github.com/jtleek/datasharing</small>
 
 Data Types
 ========================================================
@@ -152,71 +248,68 @@ Missing Data
 
 <small>https://github.com/jtleek/datasharing</small>
 
-Data Tidying
+File Naming
 ========================================================
 
-* Each researcher should tidy data to the best of their ability
-    - First row contains variable names
-    - Column names are readable
-    - Data storage is organized appropriately
-    - Thorough documentation describing the data is available
-    - Manually collected data is recorded in a consistent manner
-* Will facilitate sharing data for advanced tidying and/or analysis
+* Bad
+    - myabstract.docx
+    - Joe's Filenames Use Spaces and Punctuation.xlsx
+    - figure 1.png
+    - fig 2.png
+    - JW7d^(2sl@deletethisandyourcareerisoverWx2*.txt
 
-Sharing Data
+<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
+
+File Naming
 ========================================================
 
-* For faster analysis turnaround, include the following
-    - Raw data
-    - Tidy data
-    - Code book
-    - Instruction list
+* Good
+    - 2014-06-08_abstract-for-sla.docx
+    - joes-filenames-are-getting-better.xlsx
+    - fig01_scatterplot-talk-length-vs-interest.png
+    - fig02_histogram-talk-attendance.png
+    - 1986-01-28_raw-data-from-challenger-o-rings.txt
 
-<small>https://github.com/jtleek/datasharing</small>
 
-Code Book
+File Naming Principles
 ========================================================
 
-* Describes each variables in the data set
-    - Units of measure
-* Provides information about the summary choices made
-* Includes information about the experimental study design used
+1. Machine readable
+1. Human readable
+1. Follows default ordering
 
-<small>https://github.com/jtleek/datasharing</small>
+<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
 
-Instruction List
+Machine Readable
 ========================================================
 
-* Step-by-step instructions which describe how to
-    - Process raw data into tidy data
-    - Analyze tidy data and produce final results
-* Results should be reproducible by others
-    - Reviewers, readers, future self, etc.
-    - Given your raw data, they should be able to replicate the analysis performed
+* Avoid spaces, punctuation, case sensitivity
+* Use delimiters to facilitate searching
+    - "_" underscore to delimit sections
+    - "-" hyphen to delimit words within sections
+* Example
+    - 2014-06-08_abstract-for-sla.docx
 
-<small>https://github.com/jtleek/datasharing</small>
+<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
 
-File Formats for Sharing Data
+Human Readable
 ========================================================
 
-* Excel
-    - Usually works, but not ideal
-        + May be compatibility issues with the analysis tool
-        + Calculated cells may not be read correctly
-        + Limits on number of rows that can be stored
-    - All data should be in a single worksheet
-    - No columns or cells should be highlighted
-    - No macros should be used
+* Name contains information on content
+* Example
+    - fig01_scatterplot-talk-length-vs-interest.png
+    - fig02_histogram-talk-attendance.png
 
-<small>https://github.com/jtleek/datasharing</small>
-
-File Formats for Sharing Data
+Follows Default Ordering
 ========================================================
 
-* Text Files
-    - Examples: CSV, TAB-delimited
-    - Highest degree of compatibility
-    - Only the information in "cells" is retained
-
-<small>https://github.com/jtleek/datasharing</small>
+* Put something numeric first
+    - 01_raw-data.csv
+    - 02_tidy-data.csv
+* Use "YYYY-MM-DD" standard for dates
+    - 2014-06-08_abstract-for-sla.docx
+* Left pad with zeros (01, 02, etc.), or else you get
+    - 10_final-figs-for-publication.r
+    - 1_data-cleaning.r
+    - 2_fit-model.r
 
