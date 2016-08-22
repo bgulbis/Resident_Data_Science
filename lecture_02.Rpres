@@ -182,11 +182,20 @@ Spreadsheets
 * Usually works if organized appropriately
 * Potential issues
     - Compatibility varies depending on file type
-    - Calculated cells may not be read correctly
+    - Calculated cells may not transfer correctly
     - Limits on number of rows that can be stored
     - No record of any transformations which were done
 
 <small>https://github.com/jtleek/datasharing</small>
+
+Reproducibility
+========================================================
+
+* Given your original data, someone else should be able to repeat your analysis and obtain the same results
+* It is **essential** to keep track of step-by-step changes made to the data
+    - Keep a code book which outlines how you got from messy data to tidy data
+    - Your collaborators will greatly appreciate it
+        + Especially "future you"
 
 Data Analysis and Spreadsheets
 ========================================================
@@ -201,10 +210,9 @@ Spreadsheet Do's and Don'ts
     - Start in cell **A1**
         + Row 1 column names
     - Keep data in one sheet
+    - Save tidy data in new file
     - Put analysis in separate file
-        + Link back to data file
-        + Calculations and charts go here
-    - Keep detailed record of transformations
+        + Tables, charts, etc.
 
 ***
 
@@ -212,6 +220,7 @@ Spreadsheet Do's and Don'ts
     - Highlight, format, or merge cells
     - Use macros
     - Use spreadsheet as your data collection form
+    - Manipulate data without recording what you did
 
 Text Files
 ========================================================
@@ -324,7 +333,7 @@ Summary
 * Follow tidy data principles
 * Store data in ways that will facilitate sharing and analysis
 * Use standard data types and denote missing data
-* Naming and organizing your files wisely will be much appreciated by "future you"
+* Naming your files wisely and keeping a code book will be much appreciated by "future you"
 
 Let's Work with Some Data
 ========================================================
