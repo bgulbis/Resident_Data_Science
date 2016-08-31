@@ -338,3 +338,21 @@ Summary
 Let's Work with Some Data
 ========================================================
 type: section
+
+Data Set
+========================================================
+
+1. Go to https://data.cdc.gov
+1. Click on the dataset: TABLE III. Deaths in 122 U.S. cities
+1. Click the Export button and save to your computer
+1. Open the file and explore the data
+
+* What problems can you identify with the way the data is stored and organized?
+
+Questions
+========================================================
+
+1. In which week in Houston were the largest number of mortalities reported among patients 45 years and older?
+1. What city in the US had the largest number of mortalities reported in a given week among patients 25 to 64 years old, and in what week did this occur?
+1. During which week was the largest average number of mortalities reported among patients 25 years and older among cities within the W.S. Central region, and what was the average?
+
