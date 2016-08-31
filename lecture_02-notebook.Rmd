@@ -31,8 +31,9 @@ library(stringr)
 
 tidy <- raw %>%
     gather(age_range, mortalities, `All causes, by age (years), All Ages`:`P&I† Total, flag`) %>%
-    mutate(age_range = str_replace_all(age_range, "All causes, by age \\(years\\),", ""),
-           char = str_detect(mortalities, "-"))
+    mutate(age_range = iconv(age_range, "latin1", "ASCII", sub = "-"),
+           age_range = str_replace_all(age_range, "---", "-"),
+           age_range = str_replace_all(age_range, "All causes, by age \\(years\\),", ""))
     
 ```
 
