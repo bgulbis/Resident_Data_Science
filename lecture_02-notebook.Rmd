@@ -61,6 +61,8 @@ tidy$region <- case_when(str_detect(tidy$city, "MA|CT|RI") ~ "New England",
                          str_detect(tidy$city, "TX|LA|AR|OK") ~ "W.S. Central",
                          str_detect(tidy$city, "NM|ID|CO|NV|UT|AZ") ~ "Mountain",
                          str_detect(tidy$city, "CA|HI|OR|WA") ~ "Pacific")    
+
+write_csv(tidy, "lecture_02_data_tidy.csv")
 ```
 
 ## Questions 
