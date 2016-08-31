@@ -31,11 +31,30 @@ library(stringr)
 
 tidy <- raw %>%
     gather(age_range, mortalities, `All causes, by age (years), All Ages`:`P&I† Total, flag`) %>%
-    mutate(age_range = iconv(age_range, "latin1", "ASCII", sub = "-"),
+    mutate(`Reporting Area` = iconv(`Reporting Area`, "latin1", "ASCII", sub = ""),
+           age_range = iconv(age_range, "latin1", "ASCII", sub = "-"),
            age_range = str_replace_all(age_range, "---", "-"),
-           age_range = str_replace_all(age_range, "All causes, by age \\(years\\),", ""))
-    
+           age_range = str_replace_all(age_range, "All causes, by age \\(years\\),", ""),
+           age_range = str_replace_all(age_range, ", flag", ""),
+           age_range = str_replace_all(age_range, "P&I- Total", "pna_inf"),
+           mortalities = str_replace_all(mortalities, "-", 0),
+           `Reporting Area` = str_replace_all(`Reporting Area`, "Lincoln, NC", "Lincoln, NE")) %>%
+    drop_na(mortalities) %>%
+    arrange(`Reporting Area`, `MMWR YEAR`, `MMWR WEEK`, age_range) %>%
+    select(-`Location 2`) %>%
+    filter(!`Reporting Area` %in% c("New England", "Mid. Atlantic", "E.N. Central", "W.N Central", "S. Atlantic", "E.S. Central", "W.S. Central", "Mountain", "Pacific", "Total"))
+
+tidy$region <- case_when(str_detect(tidy$`Reporting Area`, "MA|CT|RI") ~ "New England",
+                         str_detect(tidy$`Reporting Area`, "NY|PA|NJ") ~ "Mid. Atlantic",
+                         str_detect(tidy$`Reporting Area`, "OH|IL|MI|IN|WI") ~ "E.N. Central",
+                         str_detect(tidy$`Reporting Area`, "IA|MN|KS|MO|NE") ~ "W.N. Central",
+                         str_detect(tidy$`Reporting Area`, "GA|MD|NC|FL|VA|D.C.|DE") ~ "S. Atlantic",
+                         str_detect(tidy$`Reporting Area`, "AL|TN|KY") ~ "E.S. Central",
+                         str_detect(tidy$`Reporting Area`, "TX|LA|AR|OK") ~ "W.S. Central",
+                         str_detect(tidy$`Reporting Area`, "NM|ID|CO|NV|UT|AZ") ~ "Mountain",
+                         str_detect(tidy$`Reporting Area`, "CA|HI|OR|WA") ~ "Pacific")    
 ```
 
 1. In Houston, which week had the largest number of mortalities among patients 45 years and older?
 1. What city in the US had the largest number of mortalities in a given week among patients 45 years and older?
+1. What is the average number of mortalities among patients 45 years and older in cities within the W.S. Central region?
