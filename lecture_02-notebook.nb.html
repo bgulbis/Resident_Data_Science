@@ -201,6 +201,8 @@ cols(
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+<div id="problems-with-dataset" class="section level2">
+<h2>Problems with Dataset</h2>
 <ul>
 <li>Zero encoded as a dash and is in Flag column</li>
 <li>Flag column represents Unavailable</li>
@@ -222,58 +224,147 @@ cols(
 </ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmBgYCJ9 -->
-<pre class="r"><code>library(dplyr)</code></pre>
-<!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiXG5BdHRhY2hpbmcgcGFja2FnZTog4oCYZHBseXLigJlcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOnN0YXRz4oCZOlxuXG4gICAgZmlsdGVyLCBsYWdcblxuVGhlIGZvbGxvd2luZyBvYmplY3RzIGFyZSBtYXNrZWQgZnJvbSDigJhwYWNrYWdlOmJhc2XigJk6XG5cbiAgICBpbnRlcnNlY3QsIHNldGRpZmYsIHNldGVxdWFsLCB1bmlvblxuIn0= -->
-<pre><code>
-Attaching package: ‘dplyr’
-
-The following objects are masked from ‘package:stats’:
-
-    filter, lag
-
-The following objects are masked from ‘package:base’:
-
-    intersect, setdiff, setequal, union</code></pre>
-<!-- rnb-output-end -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeSh0aWR5cilcbmxpYnJhcnkoc3RyaW5ncilcbnRpZHkgPC0gcmF3ICU+JVxuICAgIGdhdGhlcihhZ2VfcmFuZ2UsIG1vcnRhbGl0aWVzLCBgQWxsIGNhdXNlcywgYnkgYWdlICh5ZWFycyksIEFsbCBBZ2VzYDpgUCZJw6LigqzCoCBUb3RhbCwgZmxhZ2ApICU+JVxuICAgIG11dGF0ZShgUmVwb3J0aW5nIEFyZWFgID0gaWNvbnYoYFJlcG9ydGluZyBBcmVhYCwgXCJsYXRpbjFcIiwgXCJBU0NJSVwiLCBzdWIgPSBcIlwiKSxcbiAgICAgICAgICAgYWdlX3JhbmdlID0gaWNvbnYoYWdlX3JhbmdlLCBcImxhdGluMVwiLCBcIkFTQ0lJXCIsIHN1YiA9IFwiLVwiKSxcbiAgICAgICAgICAgYWdlX3JhbmdlID0gc3RyX3JlcGxhY2VfYWxsKGFnZV9yYW5nZSwgXCItLS1cIiwgXCItXCIpLFxuICAgICAgICAgICBhZ2VfcmFuZ2UgPSBzdHJfcmVwbGFjZV9hbGwoYWdlX3JhbmdlLCBcIkFsbCBjYXVzZXMsIGJ5IGFnZSBcXFxcKHllYXJzXFxcXCksXCIsIFwiXCIpLFxuICAgICAgICAgICBhZ2VfcmFuZ2UgPSBzdHJfcmVwbGFjZV9hbGwoYWdlX3JhbmdlLCBcIiwgZmxhZ1wiLCBcIlwiKSxcbiAgICAgICAgICAgYWdlX3JhbmdlID0gc3RyX3JlcGxhY2VfYWxsKGFnZV9yYW5nZSwgXCJQJkktIFRvdGFsXCIsIFwicG5hX2luZlwiKSxcbiAgICAgICAgICAgbW9ydGFsaXRpZXMgPSBzdHJfcmVwbGFjZV9hbGwobW9ydGFsaXRpZXMsIFwiLVwiLCAwKSxcbiAgICAgICAgICAgYFJlcG9ydGluZyBBcmVhYCA9IHN0cl9yZXBsYWNlX2FsbChgUmVwb3J0aW5nIEFyZWFgLCBcIkxpbmNvbG4sIE5DXCIsIFwiTGluY29sbiwgTkVcIikpICU+JVxuICAgIGRyb3BfbmEobW9ydGFsaXRpZXMpICU+JVxuICAgIGFycmFuZ2UoYFJlcG9ydGluZyBBcmVhYCwgYE1NV1IgWUVBUmAsIGBNTVdSIFdFRUtgLCBhZ2VfcmFuZ2UpICU+JVxuICAgIHNlbGVjdCgtYExvY2F0aW9uIDJgKSAlPiVcbiAgICBmaWx0ZXIoIWBSZXBvcnRpbmcgQXJlYWAgJWluJSBjKFwiTmV3IEVuZ2xhbmRcIiwgXCJNaWQuIEF0bGFudGljXCIsIFwiRS5OLiBDZW50cmFsXCIsIFwiVy5OIENlbnRyYWxcIiwgXCJTLiBBdGxhbnRpY1wiLCBcIkUuUy4gQ2VudHJhbFwiLCBcIlcuUy4gQ2VudHJhbFwiLCBcIk1vdW50YWluXCIsIFwiUGFjaWZpY1wiLCBcIlRvdGFsXCIpKVxudGlkeSRyZWdpb24gPC0gY2FzZV93aGVuKHN0cl9kZXRlY3QodGlkeSRgUmVwb3J0aW5nIEFyZWFgLCBcIk1BfENUfFJJXCIpIH4gXCJOZXcgRW5nbGFuZFwiLFxuICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRgUmVwb3J0aW5nIEFyZWFgLCBcIk5ZfFBBfE5KXCIpIH4gXCJNaWQuIEF0bGFudGljXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGBSZXBvcnRpbmcgQXJlYWAsIFwiT0h8SUx8TUl8SU58V0lcIikgfiBcIkUuTi4gQ2VudHJhbFwiLFxuICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRgUmVwb3J0aW5nIEFyZWFgLCBcIklBfE1OfEtTfE1PfE5FXCIpIH4gXCJXLk4uIENlbnRyYWxcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICBzdHJfZGV0ZWN0KHRpZHkkYFJlcG9ydGluZyBBcmVhYCwgXCJHQXxNRHxOQ3xGTHxWQXxELkMufERFXCIpIH4gXCJTLiBBdGxhbnRpY1wiLFxuICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRgUmVwb3J0aW5nIEFyZWFgLCBcIkFMfFROfEtZXCIpIH4gXCJFLlMuIENlbnRyYWxcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICBzdHJfZGV0ZWN0KHRpZHkkYFJlcG9ydGluZyBBcmVhYCwgXCJUWHxMQXxBUnxPS1wiKSB+IFwiVy5TLiBDZW50cmFsXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGBSZXBvcnRpbmcgQXJlYWAsIFwiTk18SUR8Q098TlZ8VVR8QVpcIikgfiBcIk1vdW50YWluXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGBSZXBvcnRpbmcgQXJlYWAsIFwiQ0F8SEl8T1J8V0FcIikgfiBcIlBhY2lmaWNcIikgICAgXG5gYGAifQ== -->
-<pre class="r"><code>library(tidyr)
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmxpYnJhcnkodGlkeXIpXG5saWJyYXJ5KHN0cmluZ3IpXG50aWR5IDwtIHJhdyAlPiVcbiAgICByZW5hbWUoY2l0eSA9IGBSZXBvcnRpbmcgQXJlYWAsIFxuICAgICAgICAgICB5ZWFyID0gYE1NV1IgWUVBUmAsIFxuICAgICAgICAgICB3ZWVrID0gYE1NV1IgV0VFS2AsIFxuICAgICAgICAgICBjb29yZGluYXRlcyA9IGBMb2NhdGlvbiAxYCkgJT4lXG4gICAgZ2F0aGVyKGFnZV9yYW5nZSwgbW9ydGFsaXRpZXMsIGBBbGwgY2F1c2VzLCBieSBhZ2UgKHllYXJzKSwgQWxsIEFnZXNgOmBQJknDouKCrMKgIFRvdGFsLCBmbGFnYCkgJT4lXG4gICAgbXV0YXRlKGNpdHkgPSBpY29udihjaXR5LCBcImxhdGluMVwiLCBcIkFTQ0lJXCIsIHN1YiA9IFwiXCIpLFxuICAgICAgICAgICBhZ2VfcmFuZ2UgPSBpY29udihhZ2VfcmFuZ2UsIFwibGF0aW4xXCIsIFwiQVNDSUlcIiwgc3ViID0gXCItXCIpLFxuICAgICAgICAgICBhZ2VfcmFuZ2UgPSBzdHJfcmVwbGFjZV9hbGwoYWdlX3JhbmdlLCBcIi0tLVwiLCBcIi1cIiksXG4gICAgICAgICAgIGFnZV9yYW5nZSA9IHN0cl9yZXBsYWNlX2FsbChhZ2VfcmFuZ2UsIFwiQWxsIGNhdXNlcywgYnkgYWdlIFxcXFwoeWVhcnNcXFxcKSxcIiwgXCJcIiksXG4gICAgICAgICAgIGFnZV9yYW5nZSA9IHN0cl9yZXBsYWNlX2FsbChhZ2VfcmFuZ2UsIFwiLCBmbGFnXCIsIFwiXCIpLFxuICAgICAgICAgICBhZ2VfcmFuZ2UgPSBzdHJfcmVwbGFjZV9hbGwoYWdlX3JhbmdlLCBcIlAmSS0gVG90YWxcIiwgXCJwbmFfaW5mXCIpLFxuICAgICAgICAgICBhZ2VfcmFuZ2UgPSBzdHJfdHJpbShhZ2VfcmFuZ2UsIFwiYm90aFwiKSxcbiAgICAgICAgICAgbW9ydGFsaXRpZXMgPSBzdHJfcmVwbGFjZV9hbGwobW9ydGFsaXRpZXMsIFwiLVwiLCAwKSxcbiAgICAgICAgICAgY2l0eSA9IHN0cl9yZXBsYWNlX2FsbChjaXR5LCBcIkxpbmNvbG4sIE5DXCIsIFwiTGluY29sbiwgTkVcIikpICU+JVxuICAgIGRyb3BfbmEobW9ydGFsaXRpZXMpICU+JVxuICAgIG11dGF0ZShtb3J0YWxpdGllcyA9IGFzLm51bWVyaWMobW9ydGFsaXRpZXMpKSAlPiVcbiAgICBhcnJhbmdlKGNpdHksIHllYXIsIHdlZWssIGFnZV9yYW5nZSkgJT4lXG4gICAgc2VsZWN0KC1gTG9jYXRpb24gMmApICU+JVxuICAgIGZpbHRlcighY2l0eSAlaW4lIGMoXCJOZXcgRW5nbGFuZFwiLCBcIk1pZC4gQXRsYW50aWNcIiwgXCJFLk4uIENlbnRyYWxcIiwgXCJXLk4gQ2VudHJhbFwiLCBcIlMuIEF0bGFudGljXCIsIFwiRS5TLiBDZW50cmFsXCIsIFwiVy5TLiBDZW50cmFsXCIsIFwiTW91bnRhaW5cIiwgXCJQYWNpZmljXCIsIFwiVG90YWxcIikpXG5gYGAifQ== -->
+<pre class="r"><code>library(dplyr)
+library(tidyr)
 library(stringr)
 tidy &lt;- raw %&gt;%
+    rename(city = `Reporting Area`, 
+           year = `MMWR YEAR`, 
+           week = `MMWR WEEK`, 
+           coordinates = `Location 1`) %&gt;%
     gather(age_range, mortalities, `All causes, by age (years), All Ages`:`P&amp;Iâ€  Total, flag`) %&gt;%
-    mutate(`Reporting Area` = iconv(`Reporting Area`, &quot;latin1&quot;, &quot;ASCII&quot;, sub = &quot;&quot;),
+    mutate(city = iconv(city, &quot;latin1&quot;, &quot;ASCII&quot;, sub = &quot;&quot;),
            age_range = iconv(age_range, &quot;latin1&quot;, &quot;ASCII&quot;, sub = &quot;-&quot;),
            age_range = str_replace_all(age_range, &quot;---&quot;, &quot;-&quot;),
            age_range = str_replace_all(age_range, &quot;All causes, by age \\(years\\),&quot;, &quot;&quot;),
            age_range = str_replace_all(age_range, &quot;, flag&quot;, &quot;&quot;),
            age_range = str_replace_all(age_range, &quot;P&amp;I- Total&quot;, &quot;pna_inf&quot;),
+           age_range = str_trim(age_range, &quot;both&quot;),
            mortalities = str_replace_all(mortalities, &quot;-&quot;, 0),
-           `Reporting Area` = str_replace_all(`Reporting Area`, &quot;Lincoln, NC&quot;, &quot;Lincoln, NE&quot;)) %&gt;%
+           city = str_replace_all(city, &quot;Lincoln, NC&quot;, &quot;Lincoln, NE&quot;)) %&gt;%
     drop_na(mortalities) %&gt;%
-    arrange(`Reporting Area`, `MMWR YEAR`, `MMWR WEEK`, age_range) %&gt;%
+    mutate(mortalities = as.numeric(mortalities)) %&gt;%
+    arrange(city, year, week, age_range) %&gt;%
     select(-`Location 2`) %&gt;%
-    filter(!`Reporting Area` %in% c(&quot;New England&quot;, &quot;Mid. Atlantic&quot;, &quot;E.N. Central&quot;, &quot;W.N Central&quot;, &quot;S. Atlantic&quot;, &quot;E.S. Central&quot;, &quot;W.S. Central&quot;, &quot;Mountain&quot;, &quot;Pacific&quot;, &quot;Total&quot;))
-tidy$region &lt;- case_when(str_detect(tidy$`Reporting Area`, &quot;MA|CT|RI&quot;) ~ &quot;New England&quot;,
-                         str_detect(tidy$`Reporting Area`, &quot;NY|PA|NJ&quot;) ~ &quot;Mid. Atlantic&quot;,
-                         str_detect(tidy$`Reporting Area`, &quot;OH|IL|MI|IN|WI&quot;) ~ &quot;E.N. Central&quot;,
-                         str_detect(tidy$`Reporting Area`, &quot;IA|MN|KS|MO|NE&quot;) ~ &quot;W.N. Central&quot;,
-                         str_detect(tidy$`Reporting Area`, &quot;GA|MD|NC|FL|VA|D.C.|DE&quot;) ~ &quot;S. Atlantic&quot;,
-                         str_detect(tidy$`Reporting Area`, &quot;AL|TN|KY&quot;) ~ &quot;E.S. Central&quot;,
-                         str_detect(tidy$`Reporting Area`, &quot;TX|LA|AR|OK&quot;) ~ &quot;W.S. Central&quot;,
-                         str_detect(tidy$`Reporting Area`, &quot;NM|ID|CO|NV|UT|AZ&quot;) ~ &quot;Mountain&quot;,
-                         str_detect(tidy$`Reporting Area`, &quot;CA|HI|OR|WA&quot;) ~ &quot;Pacific&quot;)    </code></pre>
+    filter(!city %in% c(&quot;New England&quot;, &quot;Mid. Atlantic&quot;, &quot;E.N. Central&quot;, &quot;W.N Central&quot;, &quot;S. Atlantic&quot;, &quot;E.S. Central&quot;, &quot;W.S. Central&quot;, &quot;Mountain&quot;, &quot;Pacific&quot;, &quot;Total&quot;))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiTkFzIGludHJvZHVjZWQgYnkgY29lcmNpb25cbiJ9 -->
+<pre><code>NAs introduced by coercion</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudGlkeSRyZWdpb24gPC0gY2FzZV93aGVuKHN0cl9kZXRlY3QodGlkeSRjaXR5LCBcIk1BfENUfFJJXCIpIH4gXCJOZXcgRW5nbGFuZFwiLFxuICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRjaXR5LCBcIk5ZfFBBfE5KXCIpIH4gXCJNaWQuIEF0bGFudGljXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGNpdHksIFwiT0h8SUx8TUl8SU58V0lcIikgfiBcIkUuTi4gQ2VudHJhbFwiLFxuICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRjaXR5LCBcIklBfE1OfEtTfE1PfE5FXCIpIH4gXCJXLk4uIENlbnRyYWxcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICBzdHJfZGV0ZWN0KHRpZHkkY2l0eSwgXCJHQXxNRHxOQ3xGTHxWQXxELkMufERFXCIpIH4gXCJTLiBBdGxhbnRpY1wiLFxuICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRjaXR5LCBcIkFMfFROfEtZXCIpIH4gXCJFLlMuIENlbnRyYWxcIixcbiAgICAgICAgICAgICAgICAgICAgICAgICBzdHJfZGV0ZWN0KHRpZHkkY2l0eSwgXCJUWHxMQXxBUnxPS1wiKSB+IFwiVy5TLiBDZW50cmFsXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGNpdHksIFwiTk18SUR8Q098TlZ8VVR8QVpcIikgfiBcIk1vdW50YWluXCIsXG4gICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGNpdHksIFwiQ0F8SEl8T1J8V0FcIikgfiBcIlBhY2lmaWNcIikgICAgXG5gYGAifQ== -->
+<pre class="r"><code>tidy$region &lt;- case_when(str_detect(tidy$city, &quot;MA|CT|RI&quot;) ~ &quot;New England&quot;,
+                         str_detect(tidy$city, &quot;NY|PA|NJ&quot;) ~ &quot;Mid. Atlantic&quot;,
+                         str_detect(tidy$city, &quot;OH|IL|MI|IN|WI&quot;) ~ &quot;E.N. Central&quot;,
+                         str_detect(tidy$city, &quot;IA|MN|KS|MO|NE&quot;) ~ &quot;W.N. Central&quot;,
+                         str_detect(tidy$city, &quot;GA|MD|NC|FL|VA|D.C.|DE&quot;) ~ &quot;S. Atlantic&quot;,
+                         str_detect(tidy$city, &quot;AL|TN|KY&quot;) ~ &quot;E.S. Central&quot;,
+                         str_detect(tidy$city, &quot;TX|LA|AR|OK&quot;) ~ &quot;W.S. Central&quot;,
+                         str_detect(tidy$city, &quot;NM|ID|CO|NV|UT|AZ&quot;) ~ &quot;Mountain&quot;,
+                         str_detect(tidy$city, &quot;CA|HI|OR|WA&quot;) ~ &quot;Pacific&quot;)    </code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
+</div>
+<div id="questions" class="section level2">
+<h2>Questions</h2>
 <ol style="list-style-type: decimal">
-<li>In Houston, which week had the largest number of mortalities among patients 45 years and older?</li>
-<li>What city in the US had the largest number of mortalities in a given week among patients 45 years and older?</li>
-<li>What is the average number of mortalities among patients 45 years and older in cities within the W.S. Central region?</li>
+<li>In which week in Houston were the largest number of mortalities reported among patients 45 years and older?</li>
+<li>What city in the US had the largest number of mortalities reported in a given week among patients 25 to 64 years old, and in what week did this occur?</li>
+<li>During which week was the largest average number of mortalities reported among patients 25 years and older among cities within the W.S. Central region, and what was the average?</li>
 </ol>
+<div id="week-with-largest-number-of-mortalities-in-houston-tx" class="section level3">
+<h3>Week with largest number of mortalities in Houston, TX</h3>
 <!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucTEgPC0gdGlkeSAlPiVcbiAgICBmaWx0ZXIoY2l0eSA9PSBcIkhvdXN0b24sIFRYXCIsXG4gICAgICAgICAgIGFnZV9yYW5nZSA9PSBcIkdFIDY1XCIgfCBhZ2VfcmFuZ2UgPT0gXCI0NS02NFwiKSAlPiVcbiAgICBncm91cF9ieSh5ZWFyLCB3ZWVrKSAlPiVcbiAgICBzdW1tYXJpemUobW9ydGFsaXRpZXMgPSBzdW0obW9ydGFsaXRpZXMsIG5hLnJtID0gVFJVRSkpICU+JVxuICAgIGFycmFuZ2UoZGVzYyhtb3J0YWxpdGllcykpXG5gYGAifQ== -->
+<pre class="r"><code>q1 &lt;- tidy %&gt;%
+    filter(city == &quot;Houston, TX&quot;,
+           age_range == &quot;GE 65&quot; | age_range == &quot;45-64&quot;) %&gt;%
+    group_by(year, week) %&gt;%
+    summarize(mortalities = sum(mortalities, na.rm = TRUE)) %&gt;%
+    arrange(desc(mortalities))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucTFbMSwgXVxuYGBgIn0= -->
+<pre class="r"><code>q1[1, ]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5jb2wiOjMsIm5yb3ciOjF9LCJyZGYiOiJINHNJQUFBQUFBQUFCbjFTUVhLRElCVDlLdEdKbWFhZDVCeHgwZWtCdXVnSnVzck9RU1dXaVVFSHNXbTd5dEY2a2g2bEZnaEVwV21aVVI2Znozdjh4MzkrMnQ3SDJ4Z0FmQWdDRC94QVF1VExud2NJNW1wK0F3aldFcWlkRzcwQjBkZUE5YnhVK1BIMENlY3hJWmd4ZkNDdEJIZWE1QnhFN3dSemk0K0U3QTFlSEdvdWNFVUZWVWNtUEhOZUh4UExwVVQ5ay96MWNyaUNlWVZiSzRoTU1DNTUzVFdrU0l1ZGlZUWlxNFpWSUZjMnRjQUNKenN1cFJ4bTlJcTVJbDZiMHIxSk5VNXV3ZXRHc1YxeXAvc1JaUVhOeVpqT091bzZ1TkIzVDF2NmNhbjlHdU1xbzJWSldwRU82ZjlraHhYT1NOV2F4eDNKcThkVm1VRi8zV2ZVRzJ1OXYveWE5VU5Sb1RrVjliKzk4RjBtNHlOOG43K3BYM1VqYU0za2hYM2JqZU9qSG5jQ3R4MVR6VkpzOHBlTzdUY1BJM2x3NUcxVGhvU1ZsQkhiUnRvZ3Mxaks1dE85bHpTY01tSHYrQU1WcGpURFB3TUFBQT09In0= -->
+<div data-pagedtable>
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["year"],"name":[1],"type":["int"],"align":["left"]},{"label":["week"],"name":[2],"type":["int"],"align":["right"]},{"label":["mortalities"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"2014","2":"13","3":"536"}],"options":{"columns":{"min":{},"max":{}},"rows":{},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="city-with-the-largest-number-of-mortalities-in-us" class="section level3">
+<h3>City with the largest number of mortalities in US</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucTIgPC0gdGlkeSAlPiVcbiAgICBmaWx0ZXIoYWdlX3JhbmdlID09IFwiMjUtNDRcIiB8IGFnZV9yYW5nZSA9PSBcIjQ1LTY0XCIpICU+JVxuICAgIGdyb3VwX2J5KGNpdHksIHllYXIsIHdlZWspICU+JVxuICAgIHN1bW1hcml6ZShtb3J0YWxpdGllcyA9IHN1bShtb3J0YWxpdGllcywgbmEucm0gPSBUUlVFKSkgJT4lXG4gICAgYXJyYW5nZShkZXNjKG1vcnRhbGl0aWVzKSlcbmBgYCJ9 -->
+<pre class="r"><code>q2 &lt;- tidy %&gt;%
+    filter(age_range == &quot;25-44&quot; | age_range == &quot;45-64&quot;) %&gt;%
+    group_by(city, year, week) %&gt;%
+    summarize(mortalities = sum(mortalities, na.rm = TRUE)) %&gt;%
+    arrange(desc(mortalities))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucTJbMSwgXVxuYGBgIn0= -->
+<pre class="r"><code>q2[1, ]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5jb2wiOjQsIm5yb3ciOjF9LCJyZGYiOiJINHNJQUFBQUFBQUFCcFZTd1ZMQ01CRGRKZ1VFUmtUNUFUNUFPSGp3N0l5ZU9YaUNFNFkyMUF3bDZhUkJoSk5mNnFkWWs1TFlFdEFaTTVOMGQ3TjV1L3Y2bnArbWQ1MXBCd0FRWUJ3QXd0b01rVDRDQ0tGdHZ1OEFlR0NpZXZkckY5Y1R1aDNPaEZ3Tkg1bmEzUTRuTXgyOExCT2c5Vm5aWUNCN3huN1l2OEJoSFZWb2NMS211VVVQYlRDTU5LaXpkNVJJWjI4cFhWbTd1eFpTa1pRcFpwNGZZYmFsMkk0ZHJta0VmZWlqME1zdkhxVWs5NHQzRWlrMkdZM244ZEpHbW1xUlZoN1dua3VOaVNManBkU2xQT1R3alVnRFBDakpyY1hMeVdwK09aMzNOcFlpTStpV3dzQzdiekVlczRnNitLREd0czl1dDV4bG5yUDlEeGZuRUc4V0xFbG9ydVpWK2gvWnpaUXNhSnBiWmFCL0tzTkE0ZUw4andrTEQreUU0RVpSa2RyVWRzdSt2Q2hPQ1VNT0RmMHFLNEN2d3o0bVdHU0tDYTRuUkFNcjRYcFRnZlFDVnh0dTFCYVBvdGNOWDQzdWE2MkExd3AySEZLZU1FNmREa3RHcmRQVDZpM0ZPODRrNDhyMStBMWtDcHlLclFNQUFBPT0ifQ== -->
+<div data-pagedtable>
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["city"],"name":[1],"type":["chr"],"align":["left"]},{"label":["year"],"name":[2],"type":["int"],"align":["right"]},{"label":["week"],"name":[3],"type":["int"],"align":["right"]},{"label":["mortalities"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"New York City, NY","2":"2014","3":"3","4":"422"}],"options":{"columns":{"min":{},"max":{}},"rows":{},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+</div>
+<div id="highest-average-number-of-mortalities-per-week-in-w.s.-central-region" class="section level3">
+<h3>Highest average number of mortalities per week in W.S. Central region</h3>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucTMgPC0gdGlkeSAlPiVcbiAgICBmaWx0ZXIocmVnaW9uID09IFwiVy5TLiBDZW50cmFsXCIsXG4gICAgICAgICAgIGFnZV9yYW5nZSA9PSBcIkdFIDY1XCIgfCBhZ2VfcmFuZ2UgPT0gXCI0NS02NFwiIHwgYWdlX3JhbmdlID09IFwiMjUtNDRcIikgJT4lXG4gICAgZ3JvdXBfYnkoY2l0eSwgeWVhciwgd2VlaykgJT4lXG4gICAgc3VtbWFyaXplKG1vcnRhbGl0aWVzID0gc3VtKG1vcnRhbGl0aWVzLCBuYS5ybSA9IFRSVUUpKSAlPiVcbiAgICBncm91cF9ieSh5ZWFyLCB3ZWVrKSAlPiVcbiAgICBzdW1tYXJpemUobW9ydGFsaXRpZXMgPSBtZWFuKG1vcnRhbGl0aWVzLCBuYS5ybSA9IFRSVUUpKSAlPiVcbiAgICBhcnJhbmdlKGRlc2MobW9ydGFsaXRpZXMpKVxuYGBgIn0= -->
+<pre class="r"><code>q3 &lt;- tidy %&gt;%
+    filter(region == &quot;W.S. Central&quot;,
+           age_range == &quot;GE 65&quot; | age_range == &quot;45-64&quot; | age_range == &quot;25-44&quot;) %&gt;%
+    group_by(city, year, week) %&gt;%
+    summarize(mortalities = sum(mortalities, na.rm = TRUE)) %&gt;%
+    group_by(year, week) %&gt;%
+    summarize(mortalities = mean(mortalities, na.rm = TRUE)) %&gt;%
+    arrange(desc(mortalities))</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucTNbMSwgXVxuYGBgIn0= -->
+<pre class="r"><code>q3[1, ]</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-frame-begin eyJtZXRhZGF0YSI6eyJjbGFzc2VzIjpbImdyb3VwZWRfZGYiLCJ0YmxfZGYiLCJ0YmwiLCJkYXRhLmZyYW1lIl0sIm5jb2wiOjMsIm5yb3ciOjF9LCJyZGYiOiJINHNJQUFBQUFBQUFCbjFTeTFMRElCUzllVFNacG1OMTdIYzBDMWN1WGZnRnJyckxrRUFqMHhReWhGaDE1ZHBQMFgveVU0eVFRcE5nbFptUXcrVndMdmR3SCs0M044a21BUUFmZ3NBRFAxQXc5TlhrUVFoei9YOEdDRllLNkoyTGZnUGlyd0dESmk4MXZzUHZIMnA4T2dJemh2YWtVZUNxRnprR3d4ZUNoTVVIUW5ZR0wvWmNTRlJSU2ZXUmljNWM4RU5xdFhSeS8wMU5uUnB1d3FKQ2pVMFltbUJTQ3Q3V0JHZDRheUtSekt0aEZhaVZwV0lrVWJvVktwV2pIRDRob1lWWHBuUnZVbzNEeFlMWFd1M0VuZTdIbEdGYWtMR2NkZFI5Z2tWLzk2eWhyNmZhenlsZTU3UXNTU096Z2Y0UE82cFFUcXJHUE80b3ZYNWN6UXk2OHo2SG5iSFcrOHV2V1RjVUZabFRjZmZiQzk5Vk1qN0M5L0diK3NWclNUbFRGL1p0TjQ2UGVzSUpYTFpNTnd0ZUY0OHQyNjF2UituQlNXK2JNaUtzcEl6WU51b05Nb3VsYXI2Kzk5SmFVQ2J0SFg4QXF4aE9pVDhEQUFBPSJ9 -->
+<div data-pagedtable>
+<script data-pagedtable-source type="application/json">
+{"columns":[{"label":["year"],"name":[1],"type":["int"],"align":["left"]},{"label":["week"],"name":[2],"type":["int"],"align":["right"]},{"label":["mortalities"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"2014","2":"2","3":"164.3333"}],"options":{"columns":{"min":{},"max":{}},"rows":{},"pages":{}}}
+  </script>
+</div>
+<!-- rnb-frame-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+</div>
+</div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIkxlY3R1cmUgMiAtIERhdGEgU3RvcmFnZSINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCmBgYHtyfQ0KbGlicmFyeShyZWFkcikNCnJhdyA8LSByZWFkX2NzdigibGVjdHVyZV8wMl9kYXRhLmNzdiIpDQpgYGANCg0KKiBaZXJvIGVuY29kZWQgYXMgYSBkYXNoIGFuZCBpcyBpbiBGbGFnIGNvbHVtbg0KKiBGbGFnIGNvbHVtbiByZXByZXNlbnRzIFVuYXZhaWxhYmxlDQoqIERhdGEgKGFnZSByYW5nZSkgc3RvcmVkIGluIHZhcmlhYmxlIG5hbWVzDQoqIFVudXN1YWwgY2hhcmFjdGVycyBpbiBjaXR5IGFuZCB2YXJpYWJsZSBuYW1lcw0KKiBNaXggb2YgYWdncmVnYXRlIGRhdGEgd2l0aCByYXcgZGF0YSAocmVnaW9uIHRvdGFscyBhbmQgb3ZlcmFsbCB0b3RhbCkNCiogQ29ycmVzcG9uZGluZyByZWdpb24gbm90IGluY2x1ZGVkIHdpdGggY2l0eQ0KICAgIC0gTmV3IEVuZ2xhbmQ6IE1BLCBDVCwgUkkNCiAgICAtIE1pZC4gQXRsYW50aWM6IE5ZLCBQQSwgTkoNCiAgICAtIEUuTi4gQ2VudHJhbDogT0gsIElMLCBNSSwgSU4sIFdJDQogICAgLSBXLk4uIENlbnRyYWw6IElBLCBNTiwgS1MsIE1PLCBORTsgTGluY29sbiwgTkM/DQogICAgLSBTLiBBdGxhbnRpYzogR0EsIE1ELCBOQywgRkwsIFZBLCBELkMuLCBERQ0KICAgIC0gRS5TLiBDZW50cmFsOiBBTCwgVE4sIEtZDQogICAgLSBXLlMuIENlbnRyYWw6IFRYLCBMQSwgQVIsIE9LDQogICAgLSBNb3VudGFpbjogTk0sIElELCBDTywgTlYsIFVULCBBWg0KICAgIC0gUGFjaWZpYzogQ0EsIEhJLCBPUiwgV0ENCg0KYGBge3J9DQpsaWJyYXJ5KGRwbHlyKQ0KbGlicmFyeSh0aWR5cikNCmxpYnJhcnkoc3RyaW5ncikNCg0KdGlkeSA8LSByYXcgJT4lDQogICAgZ2F0aGVyKGFnZV9yYW5nZSwgbW9ydGFsaXRpZXMsIGBBbGwgY2F1c2VzLCBieSBhZ2UgKHllYXJzKSwgQWxsIEFnZXNgOmBQJknigKAgVG90YWwsIGZsYWdgKSAlPiUNCiAgICBtdXRhdGUoYFJlcG9ydGluZyBBcmVhYCA9IGljb252KGBSZXBvcnRpbmcgQXJlYWAsICJsYXRpbjEiLCAiQVNDSUkiLCBzdWIgPSAiIiksDQogICAgICAgICAgIGFnZV9yYW5nZSA9IGljb252KGFnZV9yYW5nZSwgImxhdGluMSIsICJBU0NJSSIsIHN1YiA9ICItIiksDQogICAgICAgICAgIGFnZV9yYW5nZSA9IHN0cl9yZXBsYWNlX2FsbChhZ2VfcmFuZ2UsICItLS0iLCAiLSIpLA0KICAgICAgICAgICBhZ2VfcmFuZ2UgPSBzdHJfcmVwbGFjZV9hbGwoYWdlX3JhbmdlLCAiQWxsIGNhdXNlcywgYnkgYWdlIFxcKHllYXJzXFwpLCIsICIiKSwNCiAgICAgICAgICAgYWdlX3JhbmdlID0gc3RyX3JlcGxhY2VfYWxsKGFnZV9yYW5nZSwgIiwgZmxhZyIsICIiKSwNCiAgICAgICAgICAgYWdlX3JhbmdlID0gc3RyX3JlcGxhY2VfYWxsKGFnZV9yYW5nZSwgIlAmSS0gVG90YWwiLCAicG5hX2luZiIpLA0KICAgICAgICAgICBtb3J0YWxpdGllcyA9IHN0cl9yZXBsYWNlX2FsbChtb3J0YWxpdGllcywgIi0iLCAwKSwNCiAgICAgICAgICAgYFJlcG9ydGluZyBBcmVhYCA9IHN0cl9yZXBsYWNlX2FsbChgUmVwb3J0aW5nIEFyZWFgLCAiTGluY29sbiwgTkMiLCAiTGluY29sbiwgTkUiKSkgJT4lDQogICAgZHJvcF9uYShtb3J0YWxpdGllcykgJT4lDQogICAgYXJyYW5nZShgUmVwb3J0aW5nIEFyZWFgLCBgTU1XUiBZRUFSYCwgYE1NV1IgV0VFS2AsIGFnZV9yYW5nZSkgJT4lDQogICAgc2VsZWN0KC1gTG9jYXRpb24gMmApICU+JQ0KICAgIGZpbHRlcighYFJlcG9ydGluZyBBcmVhYCAlaW4lIGMoIk5ldyBFbmdsYW5kIiwgIk1pZC4gQXRsYW50aWMiLCAiRS5OLiBDZW50cmFsIiwgIlcuTiBDZW50cmFsIiwgIlMuIEF0bGFudGljIiwgIkUuUy4gQ2VudHJhbCIsICJXLlMuIENlbnRyYWwiLCAiTW91bnRhaW4iLCAiUGFjaWZpYyIsICJUb3RhbCIpKQ0KDQp0aWR5JHJlZ2lvbiA8LSBjYXNlX3doZW4oc3RyX2RldGVjdCh0aWR5JGBSZXBvcnRpbmcgQXJlYWAsICJNQXxDVHxSSSIpIH4gIk5ldyBFbmdsYW5kIiwNCiAgICAgICAgICAgICAgICAgICAgICAgICBzdHJfZGV0ZWN0KHRpZHkkYFJlcG9ydGluZyBBcmVhYCwgIk5ZfFBBfE5KIikgfiAiTWlkLiBBdGxhbnRpYyIsDQogICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGBSZXBvcnRpbmcgQXJlYWAsICJPSHxJTHxNSXxJTnxXSSIpIH4gIkUuTi4gQ2VudHJhbCIsDQogICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGBSZXBvcnRpbmcgQXJlYWAsICJJQXxNTnxLU3xNT3xORSIpIH4gIlcuTi4gQ2VudHJhbCIsDQogICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGBSZXBvcnRpbmcgQXJlYWAsICJHQXxNRHxOQ3xGTHxWQXxELkMufERFIikgfiAiUy4gQXRsYW50aWMiLA0KICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRgUmVwb3J0aW5nIEFyZWFgLCAiQUx8VE58S1kiKSB+ICJFLlMuIENlbnRyYWwiLA0KICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRgUmVwb3J0aW5nIEFyZWFgLCAiVFh8TEF8QVJ8T0siKSB+ICJXLlMuIENlbnRyYWwiLA0KICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRgUmVwb3J0aW5nIEFyZWFgLCAiTk18SUR8Q098TlZ8VVR8QVoiKSB+ICJNb3VudGFpbiIsDQogICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGBSZXBvcnRpbmcgQXJlYWAsICJDQXxISXxPUnxXQSIpIH4gIlBhY2lmaWMiKSAgICANCmBgYA0KDQoxLiBJbiBIb3VzdG9uLCB3aGljaCB3ZWVrIGhhZCB0aGUgbGFyZ2VzdCBudW1iZXIgb2YgbW9ydGFsaXRpZXMgYW1vbmcgcGF0aWVudHMgNDUgeWVhcnMgYW5kIG9sZGVyPw0KMS4gV2hhdCBjaXR5IGluIHRoZSBVUyBoYWQgdGhlIGxhcmdlc3QgbnVtYmVyIG9mIG1vcnRhbGl0aWVzIGluIGEgZ2l2ZW4gd2VlayBhbW9uZyBwYXRpZW50cyA0NSB5ZWFycyBhbmQgb2xkZXI/DQoxLiBXaGF0IGlzIHRoZSBhdmVyYWdlIG51bWJlciBvZiBtb3J0YWxpdGllcyBhbW9uZyBwYXRpZW50cyA0NSB5ZWFycyBhbmQgb2xkZXIgaW4gY2l0aWVzIHdpdGhpbiB0aGUgVy5TLiBDZW50cmFsIHJlZ2lvbj8NCg==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIkxlY3R1cmUgMiAtIERhdGEgU3RvcmFnZSINCm91dHB1dDogaHRtbF9ub3RlYm9vaw0KLS0tDQoNCmBgYHtyfQ0KbGlicmFyeShyZWFkcikNCnJhdyA8LSByZWFkX2NzdigibGVjdHVyZV8wMl9kYXRhLmNzdiIpDQpgYGANCg0KIyMgUHJvYmxlbXMgd2l0aCBEYXRhc2V0DQoNCiogWmVybyBlbmNvZGVkIGFzIGEgZGFzaCBhbmQgaXMgaW4gRmxhZyBjb2x1bW4NCiogRmxhZyBjb2x1bW4gcmVwcmVzZW50cyBVbmF2YWlsYWJsZQ0KKiBEYXRhIChhZ2UgcmFuZ2UpIHN0b3JlZCBpbiB2YXJpYWJsZSBuYW1lcw0KKiBVbnVzdWFsIGNoYXJhY3RlcnMgaW4gY2l0eSBhbmQgdmFyaWFibGUgbmFtZXMNCiogTWl4IG9mIGFnZ3JlZ2F0ZSBkYXRhIHdpdGggcmF3IGRhdGEgKHJlZ2lvbiB0b3RhbHMgYW5kIG92ZXJhbGwgdG90YWwpDQoqIENvcnJlc3BvbmRpbmcgcmVnaW9uIG5vdCBpbmNsdWRlZCB3aXRoIGNpdHkNCiAgICAtIE5ldyBFbmdsYW5kOiBNQSwgQ1QsIFJJDQogICAgLSBNaWQuIEF0bGFudGljOiBOWSwgUEEsIE5KDQogICAgLSBFLk4uIENlbnRyYWw6IE9ILCBJTCwgTUksIElOLCBXSQ0KICAgIC0gVy5OLiBDZW50cmFsOiBJQSwgTU4sIEtTLCBNTywgTkU7IExpbmNvbG4sIE5DPw0KICAgIC0gUy4gQXRsYW50aWM6IEdBLCBNRCwgTkMsIEZMLCBWQSwgRC5DLiwgREUNCiAgICAtIEUuUy4gQ2VudHJhbDogQUwsIFROLCBLWQ0KICAgIC0gVy5TLiBDZW50cmFsOiBUWCwgTEEsIEFSLCBPSw0KICAgIC0gTW91bnRhaW46IE5NLCBJRCwgQ08sIE5WLCBVVCwgQVoNCiAgICAtIFBhY2lmaWM6IENBLCBISSwgT1IsIFdBDQoNCmBgYHtyfQ0KbGlicmFyeShkcGx5cikNCmxpYnJhcnkodGlkeXIpDQpsaWJyYXJ5KHN0cmluZ3IpDQoNCnRpZHkgPC0gcmF3ICU+JQ0KICAgIHJlbmFtZShjaXR5ID0gYFJlcG9ydGluZyBBcmVhYCwgDQogICAgICAgICAgIHllYXIgPSBgTU1XUiBZRUFSYCwgDQogICAgICAgICAgIHdlZWsgPSBgTU1XUiBXRUVLYCwgDQogICAgICAgICAgIGNvb3JkaW5hdGVzID0gYExvY2F0aW9uIDFgKSAlPiUNCiAgICBnYXRoZXIoYWdlX3JhbmdlLCBtb3J0YWxpdGllcywgYEFsbCBjYXVzZXMsIGJ5IGFnZSAoeWVhcnMpLCBBbGwgQWdlc2A6YFAmSeKAoCBUb3RhbCwgZmxhZ2ApICU+JQ0KICAgIG11dGF0ZShjaXR5ID0gaWNvbnYoY2l0eSwgImxhdGluMSIsICJBU0NJSSIsIHN1YiA9ICIiKSwNCiAgICAgICAgICAgYWdlX3JhbmdlID0gaWNvbnYoYWdlX3JhbmdlLCAibGF0aW4xIiwgIkFTQ0lJIiwgc3ViID0gIi0iKSwNCiAgICAgICAgICAgYWdlX3JhbmdlID0gc3RyX3JlcGxhY2VfYWxsKGFnZV9yYW5nZSwgIi0tLSIsICItIiksDQogICAgICAgICAgIGFnZV9yYW5nZSA9IHN0cl9yZXBsYWNlX2FsbChhZ2VfcmFuZ2UsICJBbGwgY2F1c2VzLCBieSBhZ2UgXFwoeWVhcnNcXCksIiwgIiIpLA0KICAgICAgICAgICBhZ2VfcmFuZ2UgPSBzdHJfcmVwbGFjZV9hbGwoYWdlX3JhbmdlLCAiLCBmbGFnIiwgIiIpLA0KICAgICAgICAgICBhZ2VfcmFuZ2UgPSBzdHJfcmVwbGFjZV9hbGwoYWdlX3JhbmdlLCAiUCZJLSBUb3RhbCIsICJwbmFfaW5mIiksDQogICAgICAgICAgIGFnZV9yYW5nZSA9IHN0cl90cmltKGFnZV9yYW5nZSwgImJvdGgiKSwNCiAgICAgICAgICAgbW9ydGFsaXRpZXMgPSBzdHJfcmVwbGFjZV9hbGwobW9ydGFsaXRpZXMsICItIiwgMCksDQogICAgICAgICAgIGNpdHkgPSBzdHJfcmVwbGFjZV9hbGwoY2l0eSwgIkxpbmNvbG4sIE5DIiwgIkxpbmNvbG4sIE5FIikpICU+JQ0KICAgIGRyb3BfbmEobW9ydGFsaXRpZXMpICU+JQ0KICAgIG11dGF0ZShtb3J0YWxpdGllcyA9IGFzLm51bWVyaWMobW9ydGFsaXRpZXMpKSAlPiUNCiAgICBhcnJhbmdlKGNpdHksIHllYXIsIHdlZWssIGFnZV9yYW5nZSkgJT4lDQogICAgc2VsZWN0KC1gTG9jYXRpb24gMmApICU+JQ0KICAgIGZpbHRlcighY2l0eSAlaW4lIGMoIk5ldyBFbmdsYW5kIiwgIk1pZC4gQXRsYW50aWMiLCAiRS5OLiBDZW50cmFsIiwgIlcuTiBDZW50cmFsIiwgIlMuIEF0bGFudGljIiwgIkUuUy4gQ2VudHJhbCIsICJXLlMuIENlbnRyYWwiLCAiTW91bnRhaW4iLCAiUGFjaWZpYyIsICJUb3RhbCIpKQ0KDQp0aWR5JHJlZ2lvbiA8LSBjYXNlX3doZW4oc3RyX2RldGVjdCh0aWR5JGNpdHksICJNQXxDVHxSSSIpIH4gIk5ldyBFbmdsYW5kIiwNCiAgICAgICAgICAgICAgICAgICAgICAgICBzdHJfZGV0ZWN0KHRpZHkkY2l0eSwgIk5ZfFBBfE5KIikgfiAiTWlkLiBBdGxhbnRpYyIsDQogICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGNpdHksICJPSHxJTHxNSXxJTnxXSSIpIH4gIkUuTi4gQ2VudHJhbCIsDQogICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGNpdHksICJJQXxNTnxLU3xNT3xORSIpIH4gIlcuTi4gQ2VudHJhbCIsDQogICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGNpdHksICJHQXxNRHxOQ3xGTHxWQXxELkMufERFIikgfiAiUy4gQXRsYW50aWMiLA0KICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRjaXR5LCAiQUx8VE58S1kiKSB+ICJFLlMuIENlbnRyYWwiLA0KICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRjaXR5LCAiVFh8TEF8QVJ8T0siKSB+ICJXLlMuIENlbnRyYWwiLA0KICAgICAgICAgICAgICAgICAgICAgICAgIHN0cl9kZXRlY3QodGlkeSRjaXR5LCAiTk18SUR8Q098TlZ8VVR8QVoiKSB+ICJNb3VudGFpbiIsDQogICAgICAgICAgICAgICAgICAgICAgICAgc3RyX2RldGVjdCh0aWR5JGNpdHksICJDQXxISXxPUnxXQSIpIH4gIlBhY2lmaWMiKSAgICANCmBgYA0KDQojIyBRdWVzdGlvbnMgDQoNCjEuIEluIHdoaWNoIHdlZWsgaW4gSG91c3RvbiB3ZXJlIHRoZSBsYXJnZXN0IG51bWJlciBvZiBtb3J0YWxpdGllcyByZXBvcnRlZCBhbW9uZyBwYXRpZW50cyA0NSB5ZWFycyBhbmQgb2xkZXI/DQoxLiBXaGF0IGNpdHkgaW4gdGhlIFVTIGhhZCB0aGUgbGFyZ2VzdCBudW1iZXIgb2YgbW9ydGFsaXRpZXMgcmVwb3J0ZWQgaW4gYSBnaXZlbiB3ZWVrIGFtb25nIHBhdGllbnRzIDI1IHRvIDY0IHllYXJzIG9sZCwgYW5kIGluIHdoYXQgd2VlayBkaWQgdGhpcyBvY2N1cj8NCjEuIER1cmluZyB3aGljaCB3ZWVrIHdhcyB0aGUgbGFyZ2VzdCBhdmVyYWdlIG51bWJlciBvZiBtb3J0YWxpdGllcyByZXBvcnRlZCBhbW9uZyBwYXRpZW50cyAyNSB5ZWFycyBhbmQgb2xkZXIgYW1vbmcgY2l0aWVzIHdpdGhpbiB0aGUgVy5TLiBDZW50cmFsIHJlZ2lvbiwgYW5kIHdoYXQgd2FzIHRoZSBhdmVyYWdlPw0KDQojIyMgV2VlayB3aXRoIGxhcmdlc3QgbnVtYmVyIG9mIG1vcnRhbGl0aWVzIGluIEhvdXN0b24sIFRYDQoNCmBgYHtyfQ0KcTEgPC0gdGlkeSAlPiUNCiAgICBmaWx0ZXIoY2l0eSA9PSAiSG91c3RvbiwgVFgiLA0KICAgICAgICAgICBhZ2VfcmFuZ2UgPT0gIkdFIDY1IiB8IGFnZV9yYW5nZSA9PSAiNDUtNjQiKSAlPiUNCiAgICBncm91cF9ieSh5ZWFyLCB3ZWVrKSAlPiUNCiAgICBzdW1tYXJpemUobW9ydGFsaXRpZXMgPSBzdW0obW9ydGFsaXRpZXMsIG5hLnJtID0gVFJVRSkpICU+JQ0KICAgIGFycmFuZ2UoZGVzYyhtb3J0YWxpdGllcykpDQpgYGANCg0KYGBge3J9DQpxMVsxLCBdDQpgYGANCg0KIyMjIENpdHkgd2l0aCB0aGUgbGFyZ2VzdCBudW1iZXIgb2YgbW9ydGFsaXRpZXMgaW4gVVMNCg0KYGBge3J9DQpxMiA8LSB0aWR5ICU+JQ0KICAgIGZpbHRlcihhZ2VfcmFuZ2UgPT0gIjI1LTQ0IiB8IGFnZV9yYW5nZSA9PSAiNDUtNjQiKSAlPiUNCiAgICBncm91cF9ieShjaXR5LCB5ZWFyLCB3ZWVrKSAlPiUNCiAgICBzdW1tYXJpemUobW9ydGFsaXRpZXMgPSBzdW0obW9ydGFsaXRpZXMsIG5hLnJtID0gVFJVRSkpICU+JQ0KICAgIGFycmFuZ2UoZGVzYyhtb3J0YWxpdGllcykpDQpgYGANCg0KYGBge3J9DQpxMlsxLCBdDQpgYGANCg0KIyMjIEhpZ2hlc3QgYXZlcmFnZSBudW1iZXIgb2YgbW9ydGFsaXRpZXMgcGVyIHdlZWsgaW4gVy5TLiBDZW50cmFsIHJlZ2lvbg0KDQpgYGB7cn0NCnEzIDwtIHRpZHkgJT4lDQogICAgZmlsdGVyKHJlZ2lvbiA9PSAiVy5TLiBDZW50cmFsIiwNCiAgICAgICAgICAgYWdlX3JhbmdlID09ICJHRSA2NSIgfCBhZ2VfcmFuZ2UgPT0gIjQ1LTY0IiB8IGFnZV9yYW5nZSA9PSAiMjUtNDQiKSAlPiUNCiAgICBncm91cF9ieShjaXR5LCB5ZWFyLCB3ZWVrKSAlPiUNCiAgICBzdW1tYXJpemUobW9ydGFsaXRpZXMgPSBzdW0obW9ydGFsaXRpZXMsIG5hLnJtID0gVFJVRSkpICU+JQ0KICAgIGdyb3VwX2J5KHllYXIsIHdlZWspICU+JQ0KICAgIHN1bW1hcml6ZShtb3J0YWxpdGllcyA9IG1lYW4obW9ydGFsaXRpZXMsIG5hLnJtID0gVFJVRSkpICU+JQ0KICAgIGFycmFuZ2UoZGVzYyhtb3J0YWxpdGllcykpDQpgYGANCg0KYGBge3J9DQpxM1sxLCBdDQpgYGANCg0K</div>
 
 
 

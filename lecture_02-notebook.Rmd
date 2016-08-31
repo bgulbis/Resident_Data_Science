@@ -8,6 +8,8 @@ library(readr)
 raw <- read_csv("lecture_02_data.csv")
 ```
 
+## Problems with Dataset
+
 * Zero encoded as a dash and is in Flag column
 * Flag column represents Unavailable
 * Data (age range) stored in variable names
@@ -30,31 +32,86 @@ library(tidyr)
 library(stringr)
 
 tidy <- raw %>%
+    rename(city = `Reporting Area`, 
+           year = `MMWR YEAR`, 
+           week = `MMWR WEEK`, 
+           coordinates = `Location 1`) %>%
     gather(age_range, mortalities, `All causes, by age (years), All Ages`:`P&I† Total, flag`) %>%
-    mutate(`Reporting Area` = iconv(`Reporting Area`, "latin1", "ASCII", sub = ""),
+    mutate(city = iconv(city, "latin1", "ASCII", sub = ""),
            age_range = iconv(age_range, "latin1", "ASCII", sub = "-"),
            age_range = str_replace_all(age_range, "---", "-"),
            age_range = str_replace_all(age_range, "All causes, by age \\(years\\),", ""),
            age_range = str_replace_all(age_range, ", flag", ""),
            age_range = str_replace_all(age_range, "P&I- Total", "pna_inf"),
+           age_range = str_trim(age_range, "both"),
            mortalities = str_replace_all(mortalities, "-", 0),
-           `Reporting Area` = str_replace_all(`Reporting Area`, "Lincoln, NC", "Lincoln, NE")) %>%
+           city = str_replace_all(city, "Lincoln, NC", "Lincoln, NE")) %>%
     drop_na(mortalities) %>%
-    arrange(`Reporting Area`, `MMWR YEAR`, `MMWR WEEK`, age_range) %>%
+    mutate(mortalities = as.numeric(mortalities)) %>%
+    arrange(city, year, week, age_range) %>%
     select(-`Location 2`) %>%
-    filter(!`Reporting Area` %in% c("New England", "Mid. Atlantic", "E.N. Central", "W.N Central", "S. Atlantic", "E.S. Central", "W.S. Central", "Mountain", "Pacific", "Total"))
+    filter(!city %in% c("New England", "Mid. Atlantic", "E.N. Central", "W.N Central", "S. Atlantic", "E.S. Central", "W.S. Central", "Mountain", "Pacific", "Total"))
 
-tidy$region <- case_when(str_detect(tidy$`Reporting Area`, "MA|CT|RI") ~ "New England",
-                         str_detect(tidy$`Reporting Area`, "NY|PA|NJ") ~ "Mid. Atlantic",
-                         str_detect(tidy$`Reporting Area`, "OH|IL|MI|IN|WI") ~ "E.N. Central",
-                         str_detect(tidy$`Reporting Area`, "IA|MN|KS|MO|NE") ~ "W.N. Central",
-                         str_detect(tidy$`Reporting Area`, "GA|MD|NC|FL|VA|D.C.|DE") ~ "S. Atlantic",
-                         str_detect(tidy$`Reporting Area`, "AL|TN|KY") ~ "E.S. Central",
-                         str_detect(tidy$`Reporting Area`, "TX|LA|AR|OK") ~ "W.S. Central",
-                         str_detect(tidy$`Reporting Area`, "NM|ID|CO|NV|UT|AZ") ~ "Mountain",
-                         str_detect(tidy$`Reporting Area`, "CA|HI|OR|WA") ~ "Pacific")    
+tidy$region <- case_when(str_detect(tidy$city, "MA|CT|RI") ~ "New England",
+                         str_detect(tidy$city, "NY|PA|NJ") ~ "Mid. Atlantic",
+                         str_detect(tidy$city, "OH|IL|MI|IN|WI") ~ "E.N. Central",
+                         str_detect(tidy$city, "IA|MN|KS|MO|NE") ~ "W.N. Central",
+                         str_detect(tidy$city, "GA|MD|NC|FL|VA|D.C.|DE") ~ "S. Atlantic",
+                         str_detect(tidy$city, "AL|TN|KY") ~ "E.S. Central",
+                         str_detect(tidy$city, "TX|LA|AR|OK") ~ "W.S. Central",
+                         str_detect(tidy$city, "NM|ID|CO|NV|UT|AZ") ~ "Mountain",
+                         str_detect(tidy$city, "CA|HI|OR|WA") ~ "Pacific")    
 ```
 
-1. In Houston, which week had the largest number of mortalities among patients 45 years and older?
-1. What city in the US had the largest number of mortalities in a given week among patients 45 years and older?
-1. What is the average number of mortalities among patients 45 years and older in cities within the W.S. Central region?
+## Questions 
+
+1. In which week in Houston were the largest number of mortalities reported among patients 45 years and older?
+1. What city in the US had the largest number of mortalities reported in a given week among patients 25 to 64 years old, and in what week did this occur?
+1. During which week was the largest average number of mortalities reported among patients 25 years and older among cities within the W.S. Central region, and what was the average?
+
+### Week with largest number of mortalities in Houston, TX
+
+```{r}
+q1 <- tidy %>%
+    filter(city == "Houston, TX",
+           age_range == "GE 65" | age_range == "45-64") %>%
+    group_by(year, week) %>%
+    summarize(mortalities = sum(mortalities, na.rm = TRUE)) %>%
+    arrange(desc(mortalities))
+```
+
+```{r}
+q1[1, ]
+```
+
+### City with the largest number of mortalities in US
+
+```{r}
+q2 <- tidy %>%
+    filter(age_range == "25-44" | age_range == "45-64") %>%
+    group_by(city, year, week) %>%
+    summarize(mortalities = sum(mortalities, na.rm = TRUE)) %>%
+    arrange(desc(mortalities))
+```
+
+```{r}
+q2[1, ]
+```
+
+### Highest average number of mortalities per week in W.S. Central region
+
+```{r}
+q3 <- tidy %>%
+    filter(region == "W.S. Central",
+           age_range == "GE 65" | age_range == "45-64" | age_range == "25-44") %>%
+    group_by(city, year, week) %>%
+    summarize(mortalities = sum(mortalities, na.rm = TRUE)) %>%
+    group_by(year, week) %>%
+    summarize(mortalities = mean(mortalities, na.rm = TRUE)) %>%
+    arrange(desc(mortalities))
+```
+
+```{r}
+q3[1, ]
+```
+
