@@ -1,0 +1,40 @@
+---
+title: "Lecture 2 - Data Storage"
+output: html_notebook
+---
+
+```{r}
+library(readr)
+raw <- read_csv("lecture_02_data.csv")
+```
+
+* Zero encoded as a dash and is in Flag column
+* Flag column represents Unavailable
+* Data (age range) stored in variable names
+* Unusual characters in city and variable names
+* Mix of aggregate data with raw data (region totals and overall total)
+* Corresponding region not included with city
+    - New England: MA, CT, RI
+    - Mid. Atlantic: NY, PA, NJ
+    - E.N. Central: OH, IL, MI, IN, WI
+    - W.N. Central: IA, MN, KS, MO, NE; Lincoln, NC?
+    - S. Atlantic: GA, MD, NC, FL, VA, D.C., DE
+    - E.S. Central: AL, TN, KY
+    - W.S. Central: TX, LA, AR, OK
+    - Mountain: NM, ID, CO, NV, UT, AZ
+    - Pacific: CA, HI, OR, WA
+
+```{r}
+library(dplyr)
+library(tidyr)
+library(stringr)
+
+tidy <- raw %>%
+    gather(age_range, mortalities, `All causes, by age (years), All Ages`:`P&I† Total, flag`) %>%
+    mutate(age_range = str_replace_all(age_range, "All causes, by age \\(years\\),", ""),
+           char = str_detect(mortalities, "-"))
+    
+```
+
+1. In Houston, which week had the largest number of mortalities among patients 45 years and older?
+1. What city in the US had the largest number of mortalities in a given week among patients 45 years and older?
