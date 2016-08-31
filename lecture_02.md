@@ -354,5 +354,5 @@ Questions
 
 1. In which week in Houston were the largest number of mortalities reported among patients 45 years and older?
 1. What city in the US had the largest number of mortalities reported in a given week among patients 25 to 64 years old, and in what week did this occur?
-1. During which week was the largest average number of mortalities reported among patients 25 years and older among cities within the W.S. Central region, and what was the average?
+1. During which week was the largest average number of mortalities per city reported among patients 25 years and older for cities within the W.S. Central region, and what was the average?
 
