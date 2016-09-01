@@ -1,6 +1,8 @@
 ---
 title: "Lecture 2 - Data Storage"
-output: html_notebook
+output:
+  html_notebook: default
+  github_document: default
 ---
 
 ```{r}
