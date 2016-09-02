@@ -1,0 +1,20 @@
+---
+title: "Adavanced Data Tools"
+output:
+  html_notebook: default
+  github_document: default
+---
+
+## R for Data Science
+
+* http://r4ds.had.co.nz/ (blocked by MH firewall)
+    - [PDF Version](https://github.com/bgulbis/Resident_Data_Science/raw/master/R_for_Data_Science.pdf)
+
+## Getting Started
+
+**Will need to use a personal laptop**
+
+1. Download and install R (https://cloud.r-project.org)
+    i. If you are using a 64-bit operating system, I would recommend installing 64-bit version of R
+1. Download and install RStudio (http://www.rstudio.com/download)
+    i. At some point, you may want to install the preview release of RStudio to utilize R Notebooks feature
