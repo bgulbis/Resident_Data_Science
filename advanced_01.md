@@ -57,8 +57,9 @@ Programming Resources
 ---------------------
 
 1.  R-Specific
-    1.  DataCamp (<https://www.datacamp.com>)
-    2.  Udemy (<https://www.udemy.com>)
+    1.  TryR (<http://tryr.codeschool.com/>)
+    2.  DataCamp (<https://www.datacamp.com>)
+    3.  Udemy (<https://www.udemy.com>)
 
 2.  Non R-Specific
     1.  Codecademy (<https://www.codecademy.com>)
