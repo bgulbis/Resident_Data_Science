@@ -1,8 +1,8 @@
 ---
 title: "Adavanced Data Tools"
 output:
-  html_notebook: default
   github_document: default
+  html_notebook: default
 ---
 
 ## R for Data Science
@@ -10,11 +10,59 @@ output:
 * http://r4ds.had.co.nz/ (blocked by MH firewall)
     - [PDF Version](https://github.com/bgulbis/Resident_Data_Science/raw/master/R_for_Data_Science.pdf)
 
+## Why R?
+
+1. Purpose is to perform data analysis, statistics, and visualization
+1. Large community of support
+1. Large number of packages (over 7,000) available to extend base R functionality
+    i. Manipulating data (dplyr, tidry, purrr)
+    i. Visualization (ggplot2)
+    i. Modeling (caret)
+1. Open-source (free!)
+
+## How Much Programming Will I have to Learn?
+
+1. It depends... 
+    i. You don't need a ton of programming experience to be able to do basic data manipulation and visualization (this is all you need to get started using R for QI and research projects).
+    i. You will need more programming knowledge if you want to do more difficult data manipulation, build your own packages, or develop interactive visualizations and dashboards.
+
 ## Getting Started
 
 **Will need to use a personal laptop**
 
-1. Download and install R (https://cloud.r-project.org)
+1. Download and install R from CRAN (https://cloud.r-project.org)
     i. If you are using a 64-bit operating system, I would recommend installing 64-bit version of R
 1. Download and install RStudio (http://www.rstudio.com/download)
     i. At some point, you may want to install the preview release of RStudio to utilize R Notebooks feature
+1. Install packages to follow examples in R for Data Science
+
+```{r, eval = FALSE}
+pkgs <- c("dplyr", "gapminder", "ggplot2", "jsonlite", 
+          "Lahman", "lubridate", "modelr", "nycflights13", 
+          "purrr", "readr", "stringr", "tibble", "tidyr")
+
+install.packages(pkgs)
+```
+
+## Resources
+
+1. Google - adding "R" to the search query will usually find relevant results
+1. Ask for help!
+
+## Programming Resources
+
+1. R-Specific
+    i. DataCamp (https://www.datacamp.com)
+    i. Udemy (https://www.udemy.com)
+1. Non R-Specific
+    i. Codecademy (https://www.codecademy.com)
+
+## Other Resources
+
+1. Coursera
+    i. Data Science Specialization series by Johns Hopkins University
+1. edX
+    i. CS50x by Harvard University
+1. Twitter - use `#rstats`
+1. StackOverflow
+1. Khan Academy (math / statistics)
