@@ -1,6 +1,8 @@
 ---
-title: "R Notebook"
-output: html_notebook
+title: "R Demo"
+output:
+  github_document: default
+  html_notebook: default
 ---
 
 ## Example
