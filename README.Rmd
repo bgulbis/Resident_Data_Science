@@ -14,3 +14,4 @@ output: github_document
 
 1. [R for Data Science](http://r4ds.had.co.nz/) (Online) - [PDF Version](https://github.com/bgulbis/Resident_Data_Science/raw/master/R_for_Data_Science.pdf)
 1. [Overview](https://github.com/bgulbis/Resident_Data_Science/blob/master/advanced_01.md)
+    i. [Demo](https://github.com/bgulbis/Resident_Data_Science/blob/master/demo.md)
