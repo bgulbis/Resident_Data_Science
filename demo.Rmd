@@ -1,0 +1,45 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+
+## Example
+
+```{r}
+library(readr)
+library(dplyr)
+library(ggplot2)
+
+mmwr <- read_csv("lecture_02_data_tidy.csv")
+```
+
+```{r}
+df <- mmwr %>%
+    filter(city == "Houston, TX" | city == "Boston, MA",
+           age_range == "pna_inf")
+```
+
+### Graph
+
+```{r}
+ggplot(df, aes(x = week, y = mortalities, color = city)) +
+    geom_point() +
+    geom_line() +
+    geom_smooth() +
+    ggtitle("Weekly Pneumonia and Influenza Mortalities")
+```
+
+## Bar
+
+```{r}
+df2 <- mmwr %>%
+    filter(region == "W.S. Central",
+           age_range == "All Ages")
+```
+
+```{r}
+ggplot(df2, aes(x = city, y = mortalities)) + 
+    geom_bar(stat = "identity") +
+    theme(axis.text.x = element_text(angle = 45, hjust = 1))
+```
+
