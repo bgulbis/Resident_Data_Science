@@ -21,3 +21,10 @@ Excel for Data Collection
 ========================================================
 
 * Should not be used as a data collection form
+
+To Do
+=============
+
+* variables with multiple observations
+* example resident MUE sepsis 2013-2014
+* linking to data in another excel file
