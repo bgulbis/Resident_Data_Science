@@ -7,7 +7,7 @@ autosize: true
 Objectives
 ========================================================
 
-* Discuss important considerations for data collection
+* Discuss common data collection mistakes
 * Design a data collection form
 * Preparing for data tidying and analysis
 
@@ -20,19 +20,30 @@ incremental: true
 Common Mistakes
 ========================================================
 
-* Poor (or no) preparation for data collection
-* Using tools not designed for efficient data collection
-* Combining data collection and tidying
-    - Think of each step separately
-        + Data collection
-        + Data tidying
-        + Data analysis
-* Collecting aggregated data
+* Minimal preparation and testing
+* Recording aggregated data
+    - CrCl vs. Age, Weight, Gender, SCr
+    - Heparin in units/day
+* Using tools which are not designed for efficient data collection
+    - Poorly organized fields
+    - Spreadsheets (without a form)
+* Trying to collect and analyze everything in the same place
 
-Excel for Data Collection
+Separate Steps
+========================================================
+* Think of each step in process separately
+    - Data collection
+    - Data tidying
+    - Data analysis
+
+Spreadsheets for Data Collection
 ========================================================
 
-* Should not be used as a data collection form
+* Should not be used as a data collection form without proper setup
+    - Easy to have inconsistent data entry
+    - Easy to enter data in wrong place
+    - Beware automatic type conversion
+        + Dates
 
 Why Make a Form if Pulling Data Electronically?
 ========================================================
