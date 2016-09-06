@@ -121,6 +121,8 @@ Design a Better Data Collection Form
 ========================================================
 type: sub-section
 
+* Use the data points from the exercise to make a data collection form
+
 Summary
 ========================================================
 
