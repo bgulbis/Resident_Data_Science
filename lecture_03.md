@@ -11,21 +11,23 @@ Objectives
 * Design a data collection form
 * Preparing for data tidying and analysis
 
+Primary Goal of Data Collection
+========================================================
+incremental: true
+
+* Gather all data needed for a project as __efficiently__ and __accurately__ as possible
+
 Common Mistakes
 ========================================================
 
+* Poor (or no) preparation for data collection
+* Using tools not designed for efficient data collection
 * Combining data collection and tidying
     - Think of each step separately
         + Data collection
         + Data tidying
         + Data analysis
 * Collecting aggregated data
-
-Important Considerations
-========================================================
-
-* Data collection should facilitate getting data into storage
-* Data collection process should be designed to be as efficient as possible
 
 Excel for Data Collection
 ========================================================
