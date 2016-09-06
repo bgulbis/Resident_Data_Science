@@ -16,9 +16,11 @@ incremental: true
 
 * Gather all data needed for a project as __efficiently__ and __accurately__ as possible
 
-Example Data Collection
+Data Collection Exercise
 ========================================================
 type: sub-section
+
+* https://github.com/bgulbis/Resident_Data_Science/blob/master/lecture_03_example_data_collection.xlsx
 
 Common Mistakes
 ========================================================
