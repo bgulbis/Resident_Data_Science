@@ -7,8 +7,10 @@ output: github_document
 
 1. [Big Data Overview](https://bgulbis.github.io/Resident_Data_Science/lecture_01.html)
 1. [Data Storage and Associated Implications](https://bgulbis.github.io/Resident_Data_Science/lecture_02.html)
-    i. [Tidy Data Set](https://raw.githubusercontent.com/bgulbis/Resident_Data_Science/master/lecture_02_data_tidy.csv) (To download, open link in browser, right click and choose Save As)
+    i. [Tidy Data Set](https://raw.githubusercontent.com/bgulbis/Resident_Data_Science/master/lecture_02_data_tidy.csv) (To download, right click on link and choose Save As)
     i. [Lecture 2 Answers](https://bgulbis.github.io/Resident_Data_Science/lecture_02-notebook.nb.html)
+1. [Collecting Data Efficiently](https://bgulbis.github.io/Resident_Data_Science/lecture_03.html)
+    i. [Data Collection Exercise](https://github.com/bgulbis/Resident_Data_Science/blob/master/lecture_03_example_data_collection.xlsx) (To download, right click on link and choose Save As)
 
 ## Advanced Topics
 
