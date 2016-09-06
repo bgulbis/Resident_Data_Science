@@ -20,14 +20,14 @@ incremental: true
 Common Mistakes
 ========================================================
 
+* Trying to collect and analyze everything in the same place
 * Minimal preparation and testing
 * Recording aggregated data
-    - CrCl vs. Age, Weight, Gender, SCr
-    - Heparin in units/day
+    - Platelet decrease > 50% from baseline
+    - Heparin dose in units/day
 * Using tools which are not designed for efficient data collection
     - Poorly organized fields
-    - Spreadsheets (without a form)
-* Trying to collect and analyze everything in the same place
+    - Spreadsheets (without a data entry form)
 
 Separate Steps
 ========================================================
@@ -36,14 +36,15 @@ Separate Steps
     - Data tidying
     - Data analysis
 
-Spreadsheets for Data Collection
+Preparation - Form Design
 ========================================================
 
-* Should not be used as a data collection form without proper setup
-    - Easy to have inconsistent data entry
-    - Easy to enter data in wrong place
-    - Beware automatic type conversion
-        + Dates
+* Organize to facilitate efficient data collection
+    - Data points should be grouped based on where they are in the medical record
+    - May be different than how we group information to analyze
+* Have choices to select from as much as possible
+    - Faster than writing / typing
+    - Ensures consistency in data entry
 
 Why Make a Form if Pulling Data Electronically?
 ========================================================
@@ -52,14 +53,27 @@ Why Make a Form if Pulling Data Electronically?
     - Is anything missing?
 * Using a form (can be electronic) reduces data entry errors
 
-Data Collection Form Design
+Spreadsheets for Data Collection
 ========================================================
 
-* Organize to facilitate efficient data collection
-    - Data points should be grouped based on where they are in the medical record
-* Have choices to select from as much as possible
-    - Faster than writing / typing
-    - Ensures consistency in data entry
+* Should not be used for data collection without proper setup
+    - Easy to have inconsistent data entry
+    - Easy to enter data in wrong place
+    - Beware automatic type conversion
+        + Ex: Dates
+* Use a data entry form to get data into spreadsheet
+* Set up data validation to minimize entry errors
+
+Data Entry Forms
+========================================================
+
+* Excel Data Form
+    - Quick Access Toolbar -> More Commands
+    - Choose commands from -> All Commands
+    - Scroll to Form and click Add
+* More customizable forms can be made for Excel using VBA and macros
+* Google Forms
+    - More customizable than basic Excel form
 
 To Do
 =============
