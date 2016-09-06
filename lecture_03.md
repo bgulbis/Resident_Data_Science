@@ -62,7 +62,7 @@ Spreadsheets for Data Collection
     - Beware automatic type conversion
         + Ex: Dates
 * Use a data entry form to get data into spreadsheet
-* Set up data validation to minimize entry errors
+* Use data validation to minimize entry errors
 
 Data Entry Forms
 ========================================================
@@ -73,6 +73,7 @@ Data Entry Forms
     - Scroll to Form and click Add
 * More customizable forms can be made for Excel using VBA and macros
 * Google Forms
+    - Links to Google Sheets
     - More customizable than basic Excel form
 
 To Do
