@@ -1,8 +1,8 @@
 ---
 title: "Adavanced Data Tools Overview"
 output:
-  html_notebook: default
   github_document: default
+  html_notebook: default
 ---
 
 ## R for Data Science
@@ -34,7 +34,7 @@ output:
     i. If you are using a 64-bit operating system, I would recommend installing 64-bit version of R
 1. Download and install RStudio (http://www.rstudio.com/download)
     i. At some point, you may want to install the preview release of RStudio to utilize R Notebooks feature
-1. Install packages to follow examples in R for Data Science
+1. Install packages to follow examples in R for Data Science. To do this, open RStudio, and in the console (should be in the lower left-hand corner), copy and paste the following then hit Enter to run:
 
 ```{r, eval = FALSE}
 pkgs <- c("dplyr", "gapminder", "ggplot2", "jsonlite", 

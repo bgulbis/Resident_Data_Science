@@ -37,7 +37,7 @@ Getting Started
 2.  Download and install RStudio (<http://www.rstudio.com/download>)
     1.  At some point, you may want to install the preview release of RStudio to utilize R Notebooks feature
 
-3.  Install packages to follow examples in R for Data Science
+3.  Install packages to follow examples in R for Data Science. To do this, open RStudio, and in the console (should be in the lower left-hand corner), copy and paste the following then hit Enter to run:
 
 ``` r
 pkgs <- c("dplyr", "gapminder", "ggplot2", "jsonlite", 
