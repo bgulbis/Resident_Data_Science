@@ -24,4 +24,10 @@ Filtering
     - Patients who are > 18 years old
     - Patients admitted between January 1, 2015 and December 31, 2015
 
+Transforming
+========================================================
 
+* Creating new variables from existing variables
+    - Calculating CrCl and saving in a new column
+* Modifying existing variables
+    - Converting all weights to same units
