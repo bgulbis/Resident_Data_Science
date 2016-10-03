@@ -7,9 +7,9 @@ autosize: true
 Objectives
 ========================================================
 
-* Verbs for Data Tidying
+* Verbs for Data Manipulation
 
-Data Tidying Actions
+Data Manipulations Actions
 ========================================================
 
 * Filtering
