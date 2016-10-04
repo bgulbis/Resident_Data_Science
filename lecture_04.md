@@ -48,6 +48,14 @@ Sorting
     - From highest to lowest
     - From first to last
 
+Data Organization
+========================================================
+
+* Wide Format
+    - Variables are spread
+* Long Format
+    - Variables are stacked
+
 Wide Format
 ========================================================
 
@@ -67,6 +75,24 @@ Patient|Date|Measure|Reading
 2|2016-09-02|SBP|156
 2|2016-09-02|DBP|89
 2|2016-09-02|HR|76
+
+Statistical Analysis
+========================================================
+
+* Most statistical programs (i.e., SPSS) need the data in the wide format
+    - There should be only one observation per patient
+* Data with repeated measures (i.e., BP, temp) is usually best stored in the long format
+    - Data should be aggregated into a summary value(s) for analysis
+
+Example
+========================================================
+
+* Set of multiple SBP readings for each patient
+* Select a method to summarize the data for each patient
+    - Min, Max, First, Last
+    - Change from First to Last; Change from First to Min
+    - AUC of SBP
+* Use the summary value for each patient in statistical analysis
 
 Sharing Data
 ========================================================
@@ -105,3 +131,28 @@ Instruction List
     - Given your raw data, they should be able to replicate the analysis performed
 
 <small>https://github.com/jtleek/datasharing</small>
+
+Sharing Data Example
+========================================================
+
+![messy shared data](lecture_04-figure/data_sharing_messy.png)
+
+Sharing Data Example Examined
+========================================================
+
+
+
+* Diagnosis
+    - Number of distinct values: 172
+* Alcohol Use
+
+
+```
+   0   NA   nk   Nk   NK   no   nO   No   NO Past  yes  Yes NA's 
+   2    1   32    4   91  108    1  133    3    1   17   54    8 
+```
+
+* Number of packs/day
+    - Contains numeric and non-numeric data
+* Column P heading: "If yes"
+    - Unclear what this data represents
