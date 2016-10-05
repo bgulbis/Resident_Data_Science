@@ -13,6 +13,8 @@ Lectures
     1.  [Data Collection Exercise](https://github.com/bgulbis/Resident_Data_Science/blob/master/lecture_03_example_01_data_collection.xlsx) (To download, right click on link and choose Save As)
     2.  [Data Collection Spreadsheet Example 2](https://github.com/bgulbis/Resident_Data_Science/blob/master/lecture_03_example_02_data_collection.xlsx) (To download, right click on link and choose Save As)
 
+4.  [Organizing Data for Analysis](https://bgulbis.github.io/Resident_Data_Science/lecture_04.html)
+
 Advanced Topics
 ---------------
 
