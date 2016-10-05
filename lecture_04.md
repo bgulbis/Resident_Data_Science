@@ -106,7 +106,7 @@ Example
 Exploratory Analysis
 ========================================================
 
-* Looking at your data to better understand you have
+* Looking at your data to better understand what you have
 * Use tables or graphs to visualize data
     - Look for trends
     - Look for outliers
@@ -117,9 +117,17 @@ Data Validation
 
 * __Checking the data to make sure it is accurate is one of the most important steps__
 * Almost every data set is going to have mistakes in it
-    - Errors at the time data was recorded (charted)
-    - Errors on collection
-    - Errors when manipulating
+* Errors can skew results
+* Many researchers overlook this step
+
+Sources of error
+========================================================
+incremental: true
+
+* Incorrectly charted in EMR
+* Erroneous lab results
+* Recorded incorrectly by researcher upon collection or database entry
+* Incorrect calculations when manipulating / tidying
 
 Sharing Data
 ========================================================
@@ -178,3 +186,15 @@ Sharing Data Example Examined
     - Contains numeric and non-numeric data
 * Column P heading: "If yes"
     - Unclear what this data represents
+
+Summary
+========================================================
+
+* Data manipulation actions
+    - Filtering
+    - Transforming
+    - Aggregating
+    - Sorting
+* Perform an exploratory analysis
+* Validate your data
+* Include a code book and instruction list when sharing data
