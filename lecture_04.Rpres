@@ -7,7 +7,16 @@ autosize: true
 Objectives
 ========================================================
 
-* Verbs for Data Manipulation
+* Actions for Data Manipulation
+* Exploratory Analysis
+* Data Validation
+* Sharing Data
+
+Reminder
+========================================================
+type: alert
+
+* Do __NOT__ perform exploration or manipulation of the original data!
 
 Data Manipulations Actions
 ========================================================
@@ -94,6 +103,24 @@ Example
     - AUC of SBP
 * Use the summary value for each patient in statistical analysis
 
+Exploratory Analysis
+========================================================
+
+* Looking at your data to better understand you have
+* Use tables or graphs to visualize data
+    - Look for trends
+    - Look for outliers
+* In Excel, use Pivot Tables and Pivot Charts
+
+Data Validation
+========================================================
+
+* __Checking the data to make sure it is accurate is one of the most important steps__
+* Almost every data set is going to have mistakes in it
+    - Errors at the time data was recorded (charted)
+    - Errors on collection
+    - Errors when manipulating
+
 Sharing Data
 ========================================================
 
@@ -104,11 +131,6 @@ Sharing Data
     - Instruction list
 
 <small>https://github.com/jtleek/datasharing</small>
-
-Components of Tidy Data
-========================================================
-
-* Video - Leek J., Coursera - Getting and Cleaning Data
 
 Code Book
 ========================================================
