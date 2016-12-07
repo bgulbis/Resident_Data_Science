@@ -1,0 +1,106 @@
+Exploratory Data Analysis
+========================================================
+author: Brian Gulbis
+date: December 9, 2016
+autosize: true
+
+Objectives
+========================================================
+
+* Need for exploring data
+* Visualizing data as part of exploration
+
+You finally have some data!!!
+========================================================
+incremental: true
+
+* Now what?
+* Perform an exploratory data analysis
+
+Exploratory Data Analysis
+========================================================
+
+* Goal is to understand your data
+* Identify possible patterns and relationships
+* Two methods
+    - Create summaries
+    - Visualize
+
+Summaries
+========================================================
+
+* Calculate summaries on your data
+    - Discrete data
+        + Counts
+        + Proportions
+    - Continuous data
+        + Means
+        + Medians
+
+Visualization
+========================================================
+
+* Use rudimentary plots to examine the data
+* Helps to identify patterns and areas of additional exploration
+* Many researches skip this step... but you shouldn't!
+
+Example
+========================================================
+
+* Anscombe dataset
+```{r, echo=FALSE}
+library(tidyverse)
+library(stringr)
+str(anscombe)
+```
+
+Summaries of Example Set
+========================================================
+
+```{r, echo=FALSE}
+x <- select(anscombe, x1:x4) %>%
+    gather(group, x, x1:x4) %>%
+    mutate(group = str_replace_all(group, "x", ""))
+
+y <- select(anscombe, y1:y4) %>%
+    gather(ygroup, y, y1:y4) %>%
+    mutate(ygroup = str_replace_all(ygroup, "y", ""))
+
+df <- bind_cols(x, y) %>%
+    select(-ygroup)
+
+tbl <- df %>%
+    group_by(group) %>%
+    summarize(mean_x = mean(x),
+              sd_x = sd(x),
+              mean_y = mean(y),
+              sd_y = sd(y))
+
+knitr::kable(tbl, digits = 2)
+```
+
+Statistical Comparison
+========================================================
+
+```{r, echo=FALSE}
+t <- filter(df, group == "1" | group == "2")
+t.test(x ~ group, t)
+```
+
+Visualization of Example Set
+========================================================
+
+```{r, echo=FALSE}
+ggplot(df, aes(x = x, y = y)) +
+    geom_point(shape = 21, color = "red", fill = "orange", size = 3) +
+    geom_smooth(method = "lm", se = FALSE, color = "blue") +
+    facet_wrap(~group, scales = "free")
+```
+
+Types of Plots
+========================================================
+
+* Scatterplots
+* Box plots
+* Bar plots
+* Line plots
