@@ -1,7 +1,7 @@
-Data Analysis and Exploration
+(Exploratory) Data Analysis
 ========================================================
-author: Brian Gulbis
-date: December 9, 2016
+author: Brian Gulbis and Jennifer Gass
+date: January 4, 2017
 autosize: true
 css: custom.css
 
@@ -131,6 +131,18 @@ Visualization
 type: mhtmc
 
 * Without plotting the data, we would have assumed the groups were the same
+* Plotting the data allows us to identify patterns and potential relationships between variables
+
+Exploratory Plots
+========================================================
+
+* Exploratory plots are usually only for the investigator(s)
+* Often want to create many plots quickly
+    - Not worried about making them look pretty
+* May be able to make some plots in Excel, but many plots will require a statistical program
+    - SPSS
+    - R
+* We'll talk about making plots to present your data next time
 
 Types of Plots
 ========================================================
@@ -138,5 +150,6 @@ type: mhtmc
 
 * Scatterplots
 * Box plots
+* Histograms
 * Bar plots
 * Line plots
