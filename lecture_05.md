@@ -1,4 +1,4 @@
-Exploratory Data Analysis
+Data Analysis and Exploration
 ========================================================
 author: Brian Gulbis
 date: December 9, 2016
@@ -14,6 +14,7 @@ type: mhtmc
 
 You finally have some data!!!
 ========================================================
+type: mhtmc
 incremental: true
 
 * Now what?
