@@ -22,6 +22,7 @@ incremental: true
 
 Exploratory Data Analysis
 ========================================================
+type: mhtmc
 
 * Goal is to understand your data
 * Identify possible patterns and relationships
@@ -31,6 +32,7 @@ Exploratory Data Analysis
 
 Summaries
 ========================================================
+type: mhtmc
 
 * Calculate summaries on your data
     - Discrete data
@@ -42,6 +44,7 @@ Summaries
 
 Visualization
 ========================================================
+type: mhtmc
 
 * Use rudimentary plots to examine the data
 * Helps to identify patterns and areas of additional exploration
@@ -49,23 +52,23 @@ Visualization
 
 Example
 ========================================================
+type: mhtmc
 
 * Anscombe dataset
 
 ```
-'data.frame':	11 obs. of  8 variables:
- $ x1: num  10 8 13 9 11 14 6 4 12 7 ...
- $ x2: num  10 8 13 9 11 14 6 4 12 7 ...
- $ x3: num  10 8 13 9 11 14 6 4 12 7 ...
- $ x4: num  8 8 8 8 8 8 8 19 8 8 ...
- $ y1: num  8.04 6.95 7.58 8.81 8.33 ...
- $ y2: num  9.14 8.14 8.74 8.77 9.26 8.1 6.13 3.1 9.13 7.26 ...
- $ y3: num  7.46 6.77 12.74 7.11 7.81 ...
- $ y4: num  6.58 5.76 7.71 8.84 8.47 7.04 5.25 12.5 5.56 7.91 ...
+  x1 x2 x3 x4   y1   y2    y3   y4
+1 10 10 10  8 8.04 9.14  7.46 6.58
+2  8  8  8  8 6.95 8.14  6.77 5.76
+3 13 13 13  8 7.58 8.74 12.74 7.71
+4  9  9  9  8 8.81 8.77  7.11 8.84
+5 11 11 11  8 8.33 9.26  7.81 8.47
+6 14 14 14  8 9.96 8.10  8.84 7.04
 ```
 
 Summaries of Example Set
 ========================================================
+type: mhtmc
 
 
 |group | mean_x| sd_x| mean_y| sd_y|
@@ -77,29 +80,61 @@ Summaries of Example Set
 
 Statistical Comparison
 ========================================================
+type: mhtmc
 
 
 ```
 
-	Welch Two Sample t-test
+	Pairwise comparisons using t tests with pooled SD 
 
-data:  x by group
-t = 0, df = 20, p-value = 1
-alternative hypothesis: true difference in means is not equal to 0
-95 percent confidence interval:
- -2.949998  2.949998
-sample estimates:
-mean in group 1 mean in group 2 
-              9               9 
+data:  df$x and df$group 
+
+  1 2 3
+2 1 - -
+3 1 1 -
+4 1 1 1
+
+P value adjustment method: holm 
 ```
+
+Statistical Comparison - ANOVA
+========================================================
+type: mhtmc
+
+
+```
+Analysis of Variance Table
+
+Response: x
+          Df Sum Sq Mean Sq F value Pr(>F)
+group      3      0       0       0      1
+Residuals 40    440      11               
+```
+
+Assessment of the Data
+========================================================
+type: mhtmc
+incremental: true
+
+* How many think the groups are the same?
+* Let's plot the data
 
 Visualization of Example Set
 ========================================================
+type: mhtmc
+incremental: true
 
-![plot of chunk unnamed-chunk-4](lecture_05-figure/unnamed-chunk-4-1.png)
+![plot of chunk unnamed-chunk-5](lecture_05-figure/unnamed-chunk-5-1.png)
+
+Visualization
+========================================================
+type: mhtmc
+
+* Without plotting the data, we would have assumed the groups were the same
 
 Types of Plots
 ========================================================
+type: mhtmc
 
 * Scatterplots
 * Box plots

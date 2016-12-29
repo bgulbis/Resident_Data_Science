@@ -22,6 +22,7 @@ incremental: true
 
 Exploratory Data Analysis
 ========================================================
+type: mhtmc
 
 * Goal is to understand your data
 * Identify possible patterns and relationships
@@ -31,6 +32,7 @@ Exploratory Data Analysis
 
 Summaries
 ========================================================
+type: mhtmc
 
 * Calculate summaries on your data
     - Discrete data
@@ -42,6 +44,7 @@ Summaries
 
 Visualization
 ========================================================
+type: mhtmc
 
 * Use rudimentary plots to examine the data
 * Helps to identify patterns and areas of additional exploration
@@ -49,16 +52,18 @@ Visualization
 
 Example
 ========================================================
+type: mhtmc
 
 * Anscombe dataset
 ```{r, echo=FALSE}
 library(tidyverse)
 library(stringr)
-str(anscombe)
+head(anscombe)
 ```
 
 Summaries of Example Set
 ========================================================
+type: mhtmc
 
 ```{r, echo=FALSE}
 x <- select(anscombe, x1:x4) %>%
@@ -84,24 +89,52 @@ knitr::kable(tbl, digits = 2)
 
 Statistical Comparison
 ========================================================
+type: mhtmc
 
 ```{r, echo=FALSE}
-t <- filter(df, group == "1" | group == "2")
-t.test(x ~ group, t)
+# t <- filter(df, group == "1" | group == "2")
+# t.test(x ~ group, t)
+pairwise.t.test(df$x, df$group)
 ```
+
+Statistical Comparison - ANOVA
+========================================================
+type: mhtmc
+
+```{r, echo=FALSE}
+mod <- lm(x ~ group, df)
+anova(mod)
+```
+
+Assessment of the Data
+========================================================
+type: mhtmc
+incremental: true
+
+* How many think the groups are the same?
+* Let's plot the data
 
 Visualization of Example Set
 ========================================================
+type: mhtmc
+incremental: true
 
 ```{r, echo=FALSE}
 ggplot(df, aes(x = x, y = y)) +
+    geom_smooth(method = "lm", se = FALSE, color = "light blue") +
     geom_point(shape = 21, color = "red", fill = "orange", size = 3) +
-    geom_smooth(method = "lm", se = FALSE, color = "blue") +
-    facet_wrap(~group, scales = "free")
+    facet_wrap(~group)
 ```
+
+Visualization
+========================================================
+type: mhtmc
+
+* Without plotting the data, we would have assumed the groups were the same
 
 Types of Plots
 ========================================================
+type: mhtmc
 
 * Scatterplots
 * Box plots
