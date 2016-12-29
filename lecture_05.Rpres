@@ -3,9 +3,11 @@ Exploratory Data Analysis
 author: Brian Gulbis
 date: December 9, 2016
 autosize: true
+css: custom.css
 
 Objectives
 ========================================================
+type: mhtmc
 
 * Need for exploring data
 * Visualizing data as part of exploration
