@@ -5,20 +5,26 @@ date: January 4, 2017
 autosize: true
 css: custom.css
 
-Objectives
-========================================================
-type: mhtmc
-
-* Need for exploring data
-* Visualizing data as part of exploration
-
 You finally have some data!!!
 ========================================================
 type: mhtmc
 incremental: true
 
 * Now what?
-* Perform an exploratory data analysis
+
+Objectives
+========================================================
+type: mhtmc
+
+* Need for exploring data
+* Visualizing data as part of exploration
+* Types of plots
+
+First...
+========================================================
+type: mhtmc
+
+* Before doing any analysis, you must have one or more questions that you want answered
 
 Exploratory Data Analysis
 ========================================================
@@ -130,11 +136,14 @@ Visualization
 ========================================================
 type: mhtmc
 
-* Without plotting the data, we would have assumed the groups were the same
-* Plotting the data allows us to identify patterns and potential relationships between variables
+* Graphs help us understand the data and it's properties
+    - Otherwise, we would have assumed the groups in this data were the same
+* Identify patterns and potential relationships between variables
+* Debug analysis
 
 Exploratory Plots
 ========================================================
+type: mhtmc
 
 * Exploratory plots are usually only for the investigator(s)
 * Often want to create many plots quickly
@@ -142,7 +151,29 @@ Exploratory Plots
 * May be able to make some plots in Excel, but many plots will require a statistical program
     - SPSS
     - R
-* We'll talk about making plots to present your data next time
+* We'll talk about making finished plots to communicate results next time
+
+Principles of Analytic Graphics
+========================================================
+type: mhtmc
+
+Coursera Video - Exploratory Data Analysis
+
+<small>Peng R. Exploratory Data Analysis. Coursera</small>
+
+Principles of Analytic Graphics
+========================================================
+type: mhtmc
+
+1. Show comparisons
+1. Show causality or explanation
+1. Show multivariate data
+1. Integrate evidence
+1. Describe and document evidence with lables, scales, sources, etc.
+1. Content is king
+
+<small>Peng R. Exploratory Data Analysis. Coursera</small>
+<small>Tufte E. Beautiful Evidence. 2006</small>
 
 Types of Plots
 ========================================================
@@ -153,3 +184,6 @@ type: mhtmc
 * Histograms
 * Bar plots
 * Line plots
+
+========================================================
+type: mhtmc_final
