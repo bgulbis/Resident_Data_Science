@@ -1,6 +1,14 @@
 .mhtmc .reveal .state-background {
   background-image: url("lecture_05-figure/mh-tmc.jpg");
   background-repeat: no-repeat;
-  background-position: right top;
+  background-position: right bottom;
+  background-size: auto;
+}
+
+.mhtmc_final .reveal .state-background {
+  background: rgb(24,52,135);
+  background-image: url("lecture_05-figure/mh-tmc_transparent.tif");
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: auto;
 }
