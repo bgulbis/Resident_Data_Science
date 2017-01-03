@@ -36,17 +36,16 @@ type: mhtmc
     - Create summaries
     - Visualize
 
-Summaries
+Calculate Summaries
 ========================================================
 type: mhtmc
 
-* Calculate summaries on your data
-    - Discrete data
-        + Counts
-        + Proportions
-    - Continuous data
-        + Means
-        + Medians
+* Discrete data
+    - Counts
+    - Proportions
+* Continuous data
+    - Means
+    - Medians
 
 Tables
 ========================================================
@@ -62,6 +61,9 @@ type: mhtmc
 
 * Use rudimentary plots to examine the data
 * Helps to identify patterns and areas of additional exploration
+    - Correlations
+    - Outliers
+    - Errors
 * Many researches skip this step... but you shouldn't!
 
 Example
@@ -156,7 +158,7 @@ type: mhtmc
 * Exploratory plots are usually only for the investigator(s)
 * Often want to create many plots quickly
     - Not worried about making them look pretty
-* May be able to make some plots in Excel, but many plots will require a statistical program
+* Can make some plots in Excel, but many will require a statistical program
     - SPSS
     - R
 * We'll talk about making finished plots to communicate results next time
