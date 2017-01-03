@@ -183,7 +183,10 @@ type: mhtmc
 <small>Peng R. Exploratory Data Analysis. Coursera</small>
 <small>Tufte E. Beautiful Evidence. 2006</small>
 
+Chart Suggestions
 ========================================================
+title: false
+
 ![Chart Suggestions](lecture_05-figure/chart_suggestions.jpg)
 
 Types of Charts
@@ -205,5 +208,7 @@ type: mhtmc
 * Relationship
     - Scatter chart
 
+Final
 ========================================================
 type: mhtmc_final
+title: false
