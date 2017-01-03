@@ -18,7 +18,7 @@ type: mhtmc
 
 * Exploratory data analysis
 * Visualization in exploration
-* Types of plots
+* Choosing charts
 
 First...
 ========================================================
@@ -32,7 +32,7 @@ type: mhtmc
 
 * Goal is to understand your data
 * Identify possible patterns and relationships
-* Two methods
+* Two primary methods
     - Create summaries
     - Visualize
 
@@ -47,6 +47,14 @@ type: mhtmc
     - Continuous data
         + Means
         + Medians
+
+Tables
+========================================================
+type: mhtmc
+
+* Summaries usually presented in tables
+* Helpful for looking at the raw numbers
+* May be more difficult to quickly identify differences
 
 Visualization
 ========================================================
@@ -175,15 +183,27 @@ type: mhtmc
 <small>Peng R. Exploratory Data Analysis. Coursera</small>
 <small>Tufte E. Beautiful Evidence. 2006</small>
 
-Types of Plots
+========================================================
+![Chart Suggestions](lecture_05-figure/chart_suggestions.jpg)
+
+Types of Charts
 ========================================================
 type: mhtmc
 
-* Scatterplots
-* Box plots
-* Histograms
-* Bar plots
-* Line plots
+* Comparison
+    - Bar chart
+    - Line chart
+    - Box plot
+* Distribution
+    - Histograms
+
+***
+
+* Composition
+    - Bar chart
+    - Pie chart
+* Relationship
+    - Scatter chart
 
 ========================================================
 type: mhtmc_final
