@@ -16,8 +16,8 @@ Objectives
 ========================================================
 type: mhtmc
 
-* Need for exploring data
-* Visualizing data as part of exploration
+* Exploratory data analysis
+* Visualization in exploration
 * Types of plots
 
 First...
