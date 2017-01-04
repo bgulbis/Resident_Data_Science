@@ -189,6 +189,7 @@ type: mhtmc
 
 Chart Suggestions
 ========================================================
+type: mhtmc
 title: false
 
 ![Chart Suggestions](lecture_05-figure/chart_suggestions.jpg)
