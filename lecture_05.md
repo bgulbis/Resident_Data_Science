@@ -24,14 +24,14 @@ First...
 ========================================================
 type: mhtmc
 
-* Before doing any analysis, you must have one or more questions that you want answered
+* Key to any analysis is knowing what you are trying to answer
 
 Exploratory Data Analysis
 ========================================================
 type: mhtmc
 
-* Goal is to understand your data
-* Identify possible patterns and relationships
+* This is **not** about performing statistical tests
+* This **is** about understanding your data
 * Two primary methods
     - Create summaries
     - Visualize
@@ -46,6 +46,7 @@ type: mhtmc
 * Continuous data
     - Means
     - Medians
+    - Min / Max
 
 Tables
 ========================================================
@@ -66,11 +67,10 @@ type: mhtmc
     - Errors
 * Many researches skip this step... but you shouldn't!
 
-Example
+Example - Anscombe's Quartet
 ========================================================
 type: mhtmc
 
-* Anscombe dataset
 
 ```
   x1 x2 x3 x4   y1   y2    y3   y4
@@ -81,6 +81,8 @@ type: mhtmc
 5 11 11 11  8 8.33 9.26  7.81 8.47
 6 14 14 14  8 9.96 8.10  8.84 7.04
 ```
+
+<small> Anscombe F. American Statistician. 1973;27(1):17–21</small>
 
 Summaries of Example Set
 ========================================================
