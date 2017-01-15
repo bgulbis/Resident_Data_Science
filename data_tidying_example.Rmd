@@ -1,0 +1,55 @@
+---
+title: "Data Tidying Example"
+author: "Brian Gulbis"
+date: "October 5, 2016"
+output: html_notebook
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(lubridate)
+library(stringr)
+```
+
+## Load Data
+
+```{r}
+df <- read_csv("sample_data/vitals_apache.csv", col_types = "cccc") %>%
+    distinct()
+
+set.seed(778123)
+x <- distinct(df, `PowerInsight Encounter Id`) %>%
+    sample_n(5)
+
+sample_df <- semi_join(df, x, by = "PowerInsight Encounter Id") 
+
+write_csv(sample_df, "sample_data/lecture_04_sample.csv")
+```
+
+## Explore Data
+
+```{r}
+count(sample_df, `PowerInsight Encounter Id`)
+```
+
+```{r}
+count(sample_df, `Clinical Event`)
+```
+
+## Group Vitals
+
+```{r}
+tidy_df <- sample_df %>%
+    mutate(`Clinical Event` = str_replace_all(`Clinical Event`, "Arterial Diastolic BP 1", "Diastolic Blood Pressure")) 
+```
+
+## Convert to Wide
+
+```{r}
+wide_df <- tidy_df %>%
+    group_by(`PowerInsight Encounter Id`, `Clinical Event End Date/Time`, `Clinical Event`) %>%
+    summarize(`Clinical Event Result` = max(`Clinical Event Result`)) %>%
+    spread(`Clinical Event`, `Clinical Event Result`)
+```
+
