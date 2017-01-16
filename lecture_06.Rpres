@@ -8,8 +8,7 @@ css: mhtmc.css
 Objectives
 ========================================================
 
-* Discuss how to optimally present your results
-* Describe effective visualizations
+* Discuss effective visualizations for communicating data
 
 Effective Visualizations
 ========================================================
