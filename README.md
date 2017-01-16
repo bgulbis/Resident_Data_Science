@@ -15,7 +15,7 @@ Lectures
 
 4.  [Organizing Data for Analysis](https://bgulbis.github.io/Resident_Data_Science/lecture_04.html)
 5.  [Exploratory Data Analysis](https://bgulbis.github.io/Resident_Data_Science/lecture_05.html)
-6.  [Data Visualiztion](https://bgulbis.github.io/Resident_Data_Science/lecture_06.html)
+6.  [Visualizing and Reporting Data](https://bgulbis.github.io/Resident_Data_Science/lecture_06.html)
 
 Advanced Topics
 ---------------
