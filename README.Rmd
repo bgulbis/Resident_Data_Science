@@ -13,7 +13,8 @@ output: github_document
     i. [Data Collection Exercise](https://github.com/bgulbis/Resident_Data_Science/blob/master/lecture_03_example_01_data_collection.xlsx) (To download, right click on link and choose Save As)
     i. [Data Collection Spreadsheet Example 2](https://github.com/bgulbis/Resident_Data_Science/blob/master/lecture_03_example_02_data_collection.xlsx) (To download, right click on link and choose Save As)
 1. [Organizing Data for Analysis](https://bgulbis.github.io/Resident_Data_Science/lecture_04.html)
-1. [Data Analysis and Exploration](https://bgulbis.github.io/Resident_Data_Science/lecture_05.html)
+1. [Exploratory Data Analysis](https://bgulbis.github.io/Resident_Data_Science/lecture_05.html)
+1. [Data Visualiztion](https://bgulbis.github.io/Resident_Data_Science/lecture_06.html)
 
 ## Advanced Topics
 
