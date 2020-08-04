@@ -80,7 +80,7 @@ Principles of Tidy Data
 
 <small>Wickham, H. Tidy data. J Stat Software 2014; 59 (10)</small>
 
-Organization Tidy Data
+Organization of Tidy Data
 ========================================================
 
 * Wide Format
@@ -108,7 +108,7 @@ Patient|Date|Measure|Reading
 2|2016-09-02|DBP|89
 2|2016-09-02|HR|76
 
-Statistical Analysis
+Which Format to Choose?
 ========================================================
 
 * Most statistical programs (i.e., SPSS) need the data in the wide format
@@ -236,6 +236,7 @@ Data Types
 ========================================================
 
 * Continuous
+    - Record only numeric value
 * Ordinal and Categorical
     - In general, avoid coding as numbers
         + Sex should be "female" or "male"
@@ -330,8 +331,7 @@ Spreadsheet Do's and Dont's
     - Start in cell **A1**
     - Use row 1 for column names
     - Use multiple sheets / files for different types of data
-    - Save analysis in separate file
-        + Tables, charts, etc.
+    - Keep original data in a separate file from tidy data
 
 ***
 
@@ -378,7 +378,7 @@ Preparation - Form Design
     - Data points should be grouped based on where they are in the medical record
     - May be different than how we group information to analyze
 * Have choices to select from as much as possible
-    - Ex: Drop down list
+    - Ex: Circle or check; drop down list
     - Faster than writing / typing
     - Ensures consistency in data entry
 
