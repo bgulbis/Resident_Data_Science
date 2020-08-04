@@ -359,7 +359,7 @@ File Naming Examples
 
 * 01_raw-data.xlsx
 * 02_tidy-data.xlsx
-* 2014-04-08_data-for-qi-project.csv
+* 2014-04-08_data-for-qi-project.xlsx
 
 Collecting Data Efficiently
 ========================================================
@@ -378,6 +378,7 @@ Preparation - Form Design
     - Data points should be grouped based on where they are in the medical record
     - May be different than how we group information to analyze
 * Have choices to select from as much as possible
+    - Ex: Drop down list
     - Faster than writing / typing
     - Ensures consistency in data entry
 
@@ -385,8 +386,8 @@ Why Make a Form if Pulling Data Electronically?
 ========================================================
 
 * Helps to visualize all of the data points
-    - Better able to determine if anything is missing
-* Using a form (can be electronic) reduces data entry errors
+    - Identify if any data needed to determine the outcomes is missing
+* Helps communicate your needs to the person pulling the data
 
 Using Spreadsheets for Data Collection
 ========================================================
@@ -450,4 +451,14 @@ Data Example Examined
     - Contains numeric and non-numeric data
 * Column P heading: "If yes"
     - Unclear what this data represents
+
+Summary
+========================================================
+
+* Data organized in rows and columns
+* Follow tidy data principles
+* Develop a data collection form and test it for efficiency and accuracy
+* Use a data entry form when using spreadsheet
+* Collect all observations, not aggregated data
+* Validate your data
 
