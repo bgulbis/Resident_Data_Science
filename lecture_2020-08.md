@@ -1,4 +1,4 @@
-Working With Data
+Planning for Data Collection
 ========================================================
 author: Brian Gulbis
 date: August 4, 2020
@@ -7,50 +7,37 @@ autosize: true
 Objectives
 ========================================================
 
-* Storing your data
+* Organizing data collection sheet
 * Collecting data efficiently
-* Organizing for analysis
 
-Storing Your Data
-========================================================
-type: section
-
-Data Storage
+Project Process
 ========================================================
 
-* Spreadsheets (Excel, Google Sheets, etc.)
-* Text files (delimited: csv, tab, etc.)
-* Databases (Access, SQL Server, MySQL, PostgreSQL, etc.)
+* Planning and approval
+* Data collection
+* Data tidying (preparing for analysis)
+* Data analysis
+* Present findings
 
-Spreadsheets
+Common Mistakes
 ========================================================
 
-* Commonly used by most people
-* Usually works if organized appropriately
-* Potential issues
-    - Compatibility varies depending on file type
-    - Calculated cells may not transfer correctly
-    - Limits on number of rows that can be stored
-    - No record of any transformations which were done
+* Trying to collect and analyze everything in the same file
+* Minimal preparation and testing
+* Using tools which are not designed for efficient data collection
+    - Poorly organized fields
+    - Spreadsheets (without a data entry form)
+* Recording aggregated data
+    - Platelet decrease > 50% from baseline (Y/N)
+    - Heparin dose in units/day
 
-<small>https://github.com/jtleek/datasharing</small>
-
-Spreadsheet Do's and Dont's
+Plan Each Step Separately
 ========================================================
-
-* Do
-    - Start in cell **A1**
-    - Use row 1 for column names
-    - Use multiple sheets / files for different types of data
-    - Save analysis in separate file
-        + Tables, charts, etc.
-
-***
-
-* Don't
-    - Highlight, format, or merge cells
-    - Use macros
-    - Manipulate data without recording what you did
+* Optimize your process for each step
+    - Data collection
+    - Data tidying
+    - Data analysis
+* Each should occur in own place (file / sheet) using tools designed for that step
 
 Data Organization
 ========================================================
@@ -87,11 +74,50 @@ Principles of Tidy Data
 ========================================================
 
 * Variables of different "kinds" should be stored in separate tables
-    - Ex: Diagnostic data stored separately from vital sign data
+    - Ex: Demographic data stored separately from vital sign data
 * Each table should be stored in its own sheet or file
-* Multiple tables should have a column which allows them to be linked
+* Tables should have a column which allows them to be linked
 
 <small>Wickham, H. Tidy data. J Stat Software 2014; 59 (10)</small>
+
+Organization Tidy Data
+========================================================
+
+* Wide Format
+    - Variables are spread
+* Long Format
+    - Variables are stacked
+
+Wide Format
+========================================================
+
+Patient|Date|SBP|DBP|HR
+-------|----|---|---|---
+1|2016-09-01|145|95|65
+2|2016-09-02|156|89|76
+
+Long Format
+========================================================
+
+Patient|Date|Measure|Reading
+-------|----|-------|-------
+1|2016-09-01|SBP|145
+1|2016-09-01|DBP|95
+1|2016-09-01|HR|65
+2|2016-09-02|SBP|156
+2|2016-09-02|DBP|89
+2|2016-09-02|HR|76
+
+Statistical Analysis
+========================================================
+
+* Most statistical programs (i.e., SPSS) need the data in the wide format
+    - There should be only one observation per patient
+* Some data is best collected using the long format
+    - Data with multiple observations (i.e., vitals, labs, med doses)
+    - Data must be transformed into summary values for analysis
+        + Pivot tables, functions, other software
+        + Will discuss how to do this in another presentation!
 
 Common Problems with Messy Data
 ========================================================
@@ -220,173 +246,26 @@ Data Types
 
 <small>https://github.com/jtleek/datasharing</small>
 
-Missing Data
+Data with Multiple Observations
 ========================================================
 
-* Missing data should be coded as NA
-* Censored data
-    - Know something about the missing data
-        + Lab value outside detectable range
-    - Still coded as NA, but add a new column which indicates the data is censored
+* Data where the variable is measured more than once
+    - Vital signs, labs, medication doses
+* Options for collection
+    - Aggregate data at time of collection
+        + Create a single value which represents the data
+        + Ex: Average SBP; SBP > 140 (Y/N)
+    - Record all observations
+        + Aggregate at time of analysis
 
-<small>https://github.com/jtleek/datasharing</small>
-
-File Naming
+Aggregating Data
 ========================================================
 
-* Bad
-    - myabstract.docx
-    - Joe's Filenames Use Spaces and Punctuation.xlsx
-    - figure 1.png
-    - fig 2.png
-    - JW7d^(2sl@deletethisandyourcareerisoverWx2*.txt
-
-<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
-
-File Naming
-========================================================
-
-* Good
-    - 2014-06-08_abstract-for-sla.docx
-    - joes-filenames-are-getting-better.xlsx
-    - fig01_scatterplot-talk-length-vs-interest.png
-    - fig02_histogram-talk-attendance.png
-    - 1986-01-28_raw-data-from-challenger-o-rings.txt
-
-
-File Naming Principles
-========================================================
-
-1. Machine readable
-1. Human readable
-1. Follows default ordering
-
-<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
-
-Machine Readable
-========================================================
-
-* Avoid spaces, punctuation, case sensitivity
-* Use delimiters to facilitate searching
-    - "_" underscore to delimit sections
-    - "-" hyphen to delimit words within sections
-* Example
-    - 2014-06-08_abstract-for-sla.docx
-
-<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
-
-Human Readable
-========================================================
-
-* Name contains information on content
-* Example
-    - fig01_scatterplot-talk-length-vs-interest.png
-    - fig02_histogram-talk-attendance.png
-
-<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
-
-Follows Default Ordering
-========================================================
-
-* Put something numeric first
-    - 01_raw-data.csv
-    - 02_tidy-data.csv
-* Use "YYYY-MM-DD" standard for dates
-    - 2014-06-08_abstract-for-sla.docx
-* Left pad with zeros (01, 02, etc.), or else you get
-    - 10_final-figs-for-publication.r
-    - 1_data-cleaning.r
-    - 2_fit-model.r
-
-<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
-
-Summary of Data Storage
-========================================================
-
-* Data organized in rows and columns
-* Follow tidy data principles
-* Store data in ways that will facilitate sharing and analysis
-* Use standard data types and denote missing data
-* Naming your files wisely and keeping a code book will be much appreciated by "future you"
-
-Collecting Data Efficiently
-========================================================
-type: section
-
-Primary Goal of Data Collection
-========================================================
-incremental: true
-
-* Gather all data needed for a project as __efficiently__ and __accurately__ as possible
-
-Common Mistakes
-========================================================
-
-* Trying to collect and analyze everything in the same place
-* Minimal preparation and testing
-* Using tools which are not designed for efficient data collection
-    - Poorly organized fields
-    - Spreadsheets (without a data entry form)
-* Recording aggregated data
-    - Platelet decrease > 50% from baseline
-    - Heparin dose in units/day
-
-Separate Steps
-========================================================
-* Think of each step in process separately
-    - Data collection
-    - Data tidying
-    - Data analysis
-* Each should occur in own place (file) using tools designed for that step
-
-Preparation - Form Design
-========================================================
-
-* Organize to facilitate efficient data collection
-    - Data points should be grouped based on where they are in the medical record
-    - May be different than how we group information to analyze
-* Have choices to select from as much as possible
-    - Faster than writing / typing
-    - Ensures consistency in data entry
-
-Why Make a Form if Pulling Data Electronically?
-========================================================
-
-* Helps to visualize all of the data points
-    - Better able to determine if anything is missing
-* Using a form (can be electronic) reduces data entry errors
-
-Spreadsheets for Data Collection
-========================================================
-
-* If not properly designed
-    - Easy to have inconsistent data entry
-    - Easy to enter data in wrong place
-    - Beware automatic type conversion
-        + Ex: Dates
-* Use a data entry form to get data into spreadsheet
-* Use data validation to minimize entry errors
-
-Data Entry Forms
-========================================================
-
-* Excel Data Form
-    - Quick Access Toolbar -> More Commands
-    - Choose commands from -> All Commands
-    - Scroll to Form and click Add
-* Google Forms
-    - Links to Google Sheets
-    - More customizable than basic Excel form
-
-Aggregated Data
-========================================================
-
-* Often done for endpoints which must be calculated from multiple observations or data points
-    - Think it will save time
-    - Unsure how to store repeat observations (i.e., vital signs, infusion rates, etc.)
-* Recommend collecting the raw data instead
+* Think it will save time
+    - Probably does not; requires time to perform aggregation
+* Adds another source of error
     - Calculation errors at time of entry are hard to detect
-    - Aggregate data may not allow for additional exploratory analysis
+* May not allow for additional exploratory analysis
 
 Recording Multiple Observations
 ========================================================
@@ -409,64 +288,127 @@ patient_id|date_time|heart_rate
 2|2015-07-23 10:36:00|77
 2|2015-07-25 11:12:00|93
 
-Summary of Data Collection
+Missing Data
 ========================================================
 
-* Approach data collection, tidying, and analysis separately
-    - Use tools specifically designed for each
-* Develop a data collection form and test it for efficiency and accuracy
-* Use a data entry form when using spreadsheet
-* Collect raw data, not aggregated data
+* Missing data should be coded as NA or blank
+* Censored data
+    - Ex: INR > 10
+    - Know something about the missing data
+        + Lab value outside detectable range
+    - Still coded as NA, but add a new column which indicates the data is censored
 
-Organizing for Analysis
+<small>https://github.com/jtleek/datasharing</small>
+
+Missing Data Example
+========================================================
+
+patient_id|date|inr |censored_high
+----------|---------|----|-------------
+1|2016-05-01|3.78|
+1|2016-05-02|6.92|
+1|2016-05-03|NA|True
+
+Storing Your Data
+========================================================
+
+* Most people use spreadsheets
+    - Widely available
+    - Small learning curve for basic functions
+* Potential issues
+    - Compatibility varies depending on file type
+    - Calculated cells may not transfer correctly
+    - Limits on number of rows that can be stored
+    - No record of any transformations which were done
+
+<small>https://github.com/jtleek/datasharing</small>
+
+Spreadsheet Do's and Dont's
+========================================================
+
+* Do
+    - Start in cell **A1**
+    - Use row 1 for column names
+    - Use multiple sheets / files for different types of data
+    - Save analysis in separate file
+        + Tables, charts, etc.
+
+***
+
+* Don't
+    - Highlight, format, or merge cells
+    - Use macros
+    - Manipulate data without recording what you did
+
+File Naming
+========================================================
+
+* Avoid spaces, punctuation, case sensitivity
+* Use delimiters to facilitate searching
+    - "_" underscore to delimit sections
+    - "-" hyphen to delimit words within sections
+* Name describes the content
+* Start with a number or date for sorting
+    - Left pad with zeros (01, 02, etc.)
+    - Use "YYYY-MM-DD" standard for dates
+
+<small>[Reproducible Science Curriculum](https://rawgit.com/Reproducible-Science-Curriculum/rr-organization1/master/organization-01-slides.html)</small>
+
+File Naming Examples
+========================================================
+
+* 01_raw-data.xlsx
+* 02_tidy-data.xlsx
+* 2014-04-08_data-for-qi-project.csv
+
+Collecting Data Efficiently
 ========================================================
 type: section
 
-Data Organization
+Primary Goal of Data Collection
+========================================================
+incremental: true
+
+* Gather all data needed for a project as __efficiently__ and __accurately__ as possible
+
+Preparation - Form Design
 ========================================================
 
-* Wide Format
-    - Variables are spread
-* Long Format
-    - Variables are stacked
+* Organize to facilitate efficient data collection
+    - Data points should be grouped based on where they are in the medical record
+    - May be different than how we group information to analyze
+* Have choices to select from as much as possible
+    - Faster than writing / typing
+    - Ensures consistency in data entry
 
-Wide Format
+Why Make a Form if Pulling Data Electronically?
 ========================================================
 
-Patient|Date|SBP|DBP|HR
--------|----|---|---|---
-1|2016-09-01|145|95|65
-2|2016-09-02|156|89|76
+* Helps to visualize all of the data points
+    - Better able to determine if anything is missing
+* Using a form (can be electronic) reduces data entry errors
 
-Long Format
+Using Spreadsheets for Data Collection
 ========================================================
 
-Patient|Date|Measure|Reading
--------|----|-------|-------
-1|2016-09-01|SBP|145
-1|2016-09-01|DBP|95
-1|2016-09-01|HR|65
-2|2016-09-02|SBP|156
-2|2016-09-02|DBP|89
-2|2016-09-02|HR|76
+* If not properly designed
+    - Easy to have inconsistent data entry
+    - Easy to enter data in wrong place
+    - Beware automatic type conversion
+        + Ex: Dates
+* Use a data entry form to get data into spreadsheet
+* Use data validation to minimize entry errors
 
-Statistical Analysis
+Data Entry Forms
 ========================================================
 
-* Most statistical programs (i.e., SPSS) need the data in the wide format
-    - There should be only one observation per patient
-* Data with repeated measures (i.e., BP, temp) is usually best stored in the long format
-    - Data should be aggregated into a summary value(s) for analysis
-
-Example
-========================================================
-
-* Set of multiple SBP readings for each patient
-* Select a method to summarize the data for each patient
-    - Min, Max, First, Last
-    - Change from First to Last; Change from First to Min
-    - AUC of SBP
-* Use the summary value for each patient in statistical analysis
+* Excel Data Form
+    - Quick Access Toolbar -> More Commands
+    - Choose commands from -> All Commands
+    - Scroll to Form and click Add
+* Google Forms
+    - Links to Google Sheets
+    - More customizable than basic Excel form
 
 Data Validation
 ========================================================
@@ -478,14 +420,13 @@ Data Validation
 
 Sources of error
 ========================================================
-incremental: true
 
 * Incorrectly charted in EMR
 * Erroneous lab results
 * Recorded incorrectly by researcher upon collection or database entry
 * Incorrect calculations when manipulating / tidying
 
-Data Example
+Messy Data Example
 ========================================================
 
 ![messy shared data](lecture_04-figure/data_sharing_messy.png)
